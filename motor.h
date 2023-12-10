@@ -1,6 +1,9 @@
 #ifndef __MOTOR_H__
 #define __MOTOR_H__
 
+#include "configuration.h"
+#include "map.h"
+
 void LEFT_MOTOR_FORWARD(void);
 void LEFT_MOTOR_BACKWARD(void);
 void LEFT_MOTOR_STOP(void);

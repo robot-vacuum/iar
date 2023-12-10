@@ -6,11 +6,73 @@
 #include "stm32f10x_usart.h"
 #include "stm32f10x_adc.h"
 #include "definitions.h"
-#include "motor.h"
+
+uint32_t Current_Time = 0;
+uint32_t Previous_Time = 0;
 
 double adc_value = 0;
 
-#define ONE_TICK 100000
+// ********************************
+void LEFT_MOTOR_FORWARD(void)
+{
+    GPIO_SetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
+    GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
+}
+
+void LEFT_MOTOR_BACKWARD(void)
+{
+    GPIO_SetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
+    GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
+}
+
+void LEFT_MOTOR_STOP(void)
+{
+    GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
+    GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
+}
+
+void RIGHT_MOTOR_FORWARD(void)
+{
+    GPIO_SetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
+    GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);  
+}
+
+void RIGHT_MOTOR_BACKWARD(void)
+{
+    GPIO_SetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);
+    GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
+}
+
+void RIGHT_MOTOR_STOP(void)
+{
+    GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
+    GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);
+}
+
+void FORWARD(void)
+{
+    LEFT_MOTOR_FORWARD();
+    RIGHT_MOTOR_FORWARD();
+}
+
+void BACKWARD(void)
+{
+    LEFT_MOTOR_BACKWARD();
+    RIGHT_MOTOR_BACKWARD();
+}
+
+void CLOCKWISE_ROTATION(void)
+{
+    LEFT_MOTOR_FORWARD();
+    RIGHT_MOTOR_FORWARD();
+}
+
+void COUNTER_CLOCKWISE_RATATION(void)
+{
+    LEFT_MOTOR_BACKWARD();
+    RIGHT_MOTOR_BACKWARD();
+}
+// ******************************
 
 void RCC_Configuration(void)
 {
@@ -20,6 +82,8 @@ void RCC_Configuration(void)
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE, ENABLE);
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 }
 
 void GPIO_Configuration(void)
@@ -61,7 +125,7 @@ void GPIO_Configuration(void)
     GPIO_Init(GPIOC, &GPIO_InitStructure);
 
     /* 근접 센서 setting */
-    GPIO_InitStructure.GPIO_Pin = GPIO_Prox_Left_Pin | GPIO_Prox_Front_Pin | GPIO_Prox_Right_Pin;
+    GPIO_InitStructure.GPIO_Pin = /*GPIO_Prox_Left_Pin| */ GPIO_Prox_Front_Pin | GPIO_Prox_Right_Pin;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOC, &GPIO_InitStructure);
@@ -76,12 +140,12 @@ void EXTI_Configure(void)
 {
     EXTI_InitTypeDef EXTI_InitStructure;
 
-    GPIO_EXTILineConfig(GPIO_Prox_Left_PortSource, GPIO_Prox_Left_PinSource);
-    EXTI_InitStructure.EXTI_Line = EXTI_Prox_Left_Line;
-    EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-    EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
-    EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-    EXTI_Init(&EXTI_InitStructure);
+    // GPIO_EXTILineConfig(GPIO_Prox_Left_PortSource, GPIO_Prox_Left_PinSource);
+    // EXTI_InitStructure.EXTI_Line = EXTI_Prox_Left_Line;
+    // EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    // EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
+    // EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    // EXTI_Init(&EXTI_InitStructure);
 
     GPIO_EXTILineConfig(GPIO_Prox_Front_PortSource, GPIO_Prox_Front_PinSource);
     EXTI_InitStructure.EXTI_Line = EXTI_Prox_Front_Line;
@@ -98,7 +162,8 @@ void EXTI_Configure(void)
     EXTI_Init(&EXTI_InitStructure);
 }
 
-void ADC_Configure(){
+void ADC_Configure()
+{
     ADC_InitTypeDef ADC_InitStructure;
     ADC_DeInit(ADC1);
     ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;
@@ -119,11 +184,6 @@ void ADC_Configure(){
     ADC_StartCalibration(ADC1);
     while(ADC_GetCalibrationStatus(ADC1));
     ADC_SoftwareStartConvCmd(ADC1, ENABLE);
-}
-
-void ADC1_2_IRQHandler() {
-    adc_value = (double)ADC_GetConversionValue(ADC1);
-    ADC_ClearITPendingBit(ADC1,ADC_IT_EOC);
 }
 
 void USART1_Init(void)
@@ -148,7 +208,7 @@ void NVIC_Configuration(void)
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 
     NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 4;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure); 
@@ -161,10 +221,10 @@ void NVIC_Configuration(void)
     NVIC_Init(&NVIC_InitStructure);
 
     /* Prox sensor setting */
-    NVIC_InitStructure.NVIC_IRQChannel = EXTI_Prox_Left_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
-    NVIC_Init(&NVIC_InitStructure);
+    // NVIC_InitStructure.NVIC_IRQChannel = EXTI_Prox_Left_IRQn;
+    // NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+    // NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
+    // NVIC_Init(&NVIC_InitStructure);
 
     NVIC_InitStructure.NVIC_IRQChannel = EXTI_Prox_Front_IRQn;
     NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
@@ -182,16 +242,16 @@ void PWM_Configuration(void)
     TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
     TIM_OCInitTypeDef TIM_OCInitStructure;
 
-    uint16_t prescale = (uint16_t) (SystemCoreClock / 100000);
+    uint16_t prescale = (uint16_t) (SystemCoreClock / 10000);
   
-    TIM_TimeBaseStructure.TIM_Period = ONE_TICK * 360;
+    TIM_TimeBaseStructure.TIM_Period = ONE_TICK;
     TIM_TimeBaseStructure.TIM_Prescaler = prescale;
     TIM_TimeBaseStructure.TIM_ClockDivision = 0;
     TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Down;
     TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
     TIM_ARRPreloadConfig(TIM2, ENABLE);
     TIM_Cmd(TIM2, ENABLE);
-
+/*
     TIM_TimeBaseStructure.TIM_Period = 20000;
     TIM_TimeBaseStructure.TIM_Prescaler = prescale;
     TIM_TimeBaseStructure.TIM_ClockDivision = 0;
@@ -205,19 +265,86 @@ void PWM_Configuration(void)
     TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
     TIM_OC3PreloadConfig(TIM3, TIM_OCPreload_Disable);
     TIM_ARRPreloadConfig(TIM3, ENABLE);
-    TIM_Cmd(TIM3, ENABLE);
+    TIM_Cmd(TIM3, ENABLE);*/
+}
+
+void ADC1_2_IRQHandler(void) 
+{
+    adc_value = (double)ADC_GetConversionValue(ADC1);
+    ADC_ClearITPendingBit(ADC1,ADC_IT_EOC);
 }
 
 void TIM2_IRQHandler(void)
 {
     if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
     {
-        LEFT_MOTOR_STOP();
         RIGHT_MOTOR_STOP();
+            LEFT_MOTOR_STOP();
 
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     }
 }
+
+// void EXTI2_IRQHandler(void)
+// {
+//     if(EXTI_GetITStatus(EXTI_Prox_Left_Line) != RESET)
+//     {
+//         CLOCKWISE_ROTATION();
+
+//         EXTI_ClearITPendingBit(EXTI_Prox_Left_Line);
+//     }
+// }
+
+void EXTI3_IRQHandler(void)
+{
+    if(EXTI_GetITStatus(EXTI_Prox_Front_Line) != RESET)
+    {
+        CLOCKWISE_ROTATION();
+
+        EXTI_ClearITPendingBit(EXTI_Prox_Front_Line);
+    }
+}
+
+void EXTI4_IRQHandler(void)
+{
+    if(EXTI_GetITStatus(EXTI_Prox_Right_Line) != RESET)
+    {
+        LEFT_MOTOR_STOP();
+        RIGHT_MOTOR_STOP();
+
+        EXTI_ClearITPendingBit(EXTI_Prox_Right_Line);
+    }
+}
+
+void USART2_IRQHandler() {
+    uint16_t word;
+    if(USART_GetITStatus(USART2,USART_IT_RXNE)!=RESET){
+        // the most recent received data by the USART2 peripheral
+        word = USART_ReceiveData(USART2);
+
+        switch (word - '0')
+        {
+        case 0:
+          COUNTER_CLOCKWISE_RATATION();
+          break;
+        case 1:
+          CLOCKWISE_ROTATION();
+          break;
+        
+        default:
+          break;
+        }
+
+        /*
+        // TODO implement
+        USART_SendData(USART1, word);
+        */
+
+        // clear 'Read data register not empty' flag
+       USART_ClearITPendingBit(USART2,USART_IT_RXNE);
+    }
+}
+
 
 void delay()
 {
@@ -227,21 +354,26 @@ void delay()
 
 int main(void)
 {
+  SystemInit();
     RCC_Configuration();
     GPIO_Configuration();
+    EXTI_Configure();
     NVIC_Configuration();
     PWM_Configuration();
 
     USART1_Init(); // bluetooth
+    
+    TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
 
-    CLOCKWISE_ROTATION();
 
     while(1)
     {
         if(GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_4) == 0)
         {
-            LEFT_MOTOR_FORWARD();
-            RIGHT_MOTOR_BACKWARD();
+          
+            CLOCKWISE_ROTATION();
+            
+        
         }
         delay();
     }

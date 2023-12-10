@@ -1,6 +1,7 @@
 #ifndef __DEFINITIONS_H
 #define __DEFINITIONS_H
 
+#include "configuration.h"
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_exti.h"
 
@@ -32,8 +33,11 @@
 #define EXTI_Prox_Front_Line EXTI_Line3
 #define EXTI_Prox_Right_Line EXTI_Line4
 
-#define EXTI_Prox_Left_IRQn EXTI1_IRQn
-#define EXTI_Prox_Front_IRQn EXTI2_IRQn
-#define EXTI_Prox_Right_IRQn EXTI3_IRQn
+#define EXTI_Prox_Left_IRQn EXTI2_IRQn
+#define EXTI_Prox_Front_IRQn EXTI3_IRQn
+#define EXTI_Prox_Right_IRQn EXTI4_IRQn
+
+
+#define ONE_TICK 50000
 
 #endif
