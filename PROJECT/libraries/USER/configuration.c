@@ -1,5 +1,7 @@
 #include "configuration.h"
 
+int isDark = 0;
+
 int isInturrupted = 0;
 int isClockWise = 0;
 
@@ -10,6 +12,13 @@ EXTI_InitTypeDef EXTI_InitStructure;
 TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
 TIM_OCInitTypeDef TIM_OCInitStructure;
 
+int dir[4][2] = {{FORWARD_TICK, 0}, {0, FORWARD_TICK}, {-FORWARD_TICK, 0}, {0, -FORWARD_TICK}};
+int dir_Idx = 0;
+
+Point inner_Map[100];
+int inner_Map_Idx = 0;
+
+
 void Right_Interrupt_Enable(void) {
   Right_Interrupt_Status = 1;
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
@@ -19,6 +28,14 @@ void Right_Interrupt_Enable(void) {
 void Right_Interrupt_Disable(void) {
   Right_Interrupt_Status = 0;
   EXTI_InitStructure.EXTI_LineCmd = DISABLE;
+  EXTI_Init(&EXTI_InitStructure);
+}
+
+void EXTI_Cmd(uint32_t EXTI_Line, FunctionalState command) {
+  EXTI_InitStructure.EXTI_Line = EXTI_Line;
+  EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+  EXTI_InitStructure.EXTI_LineCmd = command;
   EXTI_Init(&EXTI_InitStructure);
 }
 
@@ -52,6 +69,8 @@ void GPIO_Configuration(void) {
   GPIO_Init(GPIO_Right_Motor_Port, &GPIO_InitStructure);
 
   /* USART1 pin setting (USART1 Port)*/
+
+  
   // TX
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
@@ -61,8 +80,9 @@ void GPIO_Configuration(void) {
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU | GPIO_Mode_IPD;
   GPIO_Init(GPIOA, &GPIO_InitStructure);
+  
 
-  /* USART2 pin setting (BLE)*/ 
+  /* USART2 pin setting (BLE)*/
   // TX
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
@@ -80,8 +100,8 @@ void GPIO_Configuration(void) {
   GPIO_Init(GPIO_Illumination_Port, &GPIO_InitStructure);
 
   /* 근접 센서 setting */
-  GPIO_InitStructure.GPIO_Pin = GPIO_Prox_Front_Pin1 | GPIO_Prox_Front_Pin2 |
-                                GPIO_Prox_Right_Pin1 | GPIO_Prox_Right_Pin2;
+  GPIO_InitStructure.GPIO_Pin =
+      GPIO_Prox_Front_Pin1 | GPIO_Prox_Front_Pin2;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
   GPIO_Init(GPIO_Prox_Front_Port1, &GPIO_InitStructure);
@@ -90,7 +110,13 @@ void GPIO_Configuration(void) {
   GPIO_InitStructure.GPIO_Pin = GPIO_Prox_Front_Pin | GPIO_Prox_Right_Pin;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_Init(GPIOD, &GPIO_InitStructure);*/
+  GPIO_Init(GPIOD, &GPIO_InitStructure);
+*/
+
+  GPIO_InitStructure.GPIO_Pin = GPIO_Illumination_Pin;
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_Init(GPIO_Illumination_Port, &GPIO_InitStructure);
 
   // Debuggin LED
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_7;
@@ -114,6 +140,7 @@ void EXTI_Configure(void) {
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);
 
+/*
   GPIO_EXTILineConfig(GPIO_Prox_Right_PortSource1, GPIO_Prox_Right_PinSource1);
   EXTI_InitStructure.EXTI_Line = EXTI_Prox_Right_Line1;
   EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
@@ -127,12 +154,12 @@ void EXTI_Configure(void) {
   EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
   EXTI_InitStructure.EXTI_LineCmd = DISABLE;
   EXTI_Init(&EXTI_InitStructure);
+*/
 
-  GPIO_EXTILineConfig(GPIO_Illumination_PortSource,
-                      GPIO_Illumination_PinSource);
+  GPIO_EXTILineConfig(GPIO_Illumination_PortSource, GPIO_Illumination_PinSource);
   EXTI_InitStructure.EXTI_Line = EXTI_Illumination_Line;
   EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);
 
@@ -142,11 +169,12 @@ void EXTI_Configure(void) {
 void USART12_Init(void) {
   USART_InitTypeDef USART1_InitStructure;
   USART_InitTypeDef USART2_InitStructure;
+
+
   USART_Cmd(USART1, ENABLE);
 
   USART1_InitStructure.USART_BaudRate = 9600;
-  USART1_InitStructure.USART_HardwareFlowControl =
-      USART_HardwareFlowControl_None;
+  USART1_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
   USART1_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
   USART1_InitStructure.USART_Parity = USART_Parity_No;
   USART1_InitStructure.USART_StopBits = USART_StopBits_1;
@@ -155,11 +183,11 @@ void USART12_Init(void) {
   USART_Init(USART1, &USART1_InitStructure);
   USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
 
+
   USART_Cmd(USART2, ENABLE);
 
   USART2_InitStructure.USART_BaudRate = 9600;
-  USART2_InitStructure.USART_HardwareFlowControl =
-      USART_HardwareFlowControl_None;
+  USART2_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
   USART2_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
   USART2_InitStructure.USART_Parity = USART_Parity_No;
   USART2_InitStructure.USART_StopBits = USART_StopBits_1;
@@ -175,7 +203,7 @@ void NVIC_Configuration(void) {
 
   // Timer for Rotating
   NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
   NVIC_Init(&NVIC_InitStructure);
 
@@ -188,29 +216,35 @@ void NVIC_Configuration(void) {
   /* Prox sensor setting */
 
   NVIC_InitStructure.NVIC_IRQChannel = EXTI_Prox_Front_IRQn;
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
   NVIC_Init(&NVIC_InitStructure);
 
+/*
   NVIC_InitStructure.NVIC_IRQChannel = EXTI_Prox_Right_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
   NVIC_Init(&NVIC_InitStructure);
+*/
 
   NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
   NVIC_Init(&NVIC_InitStructure);
 
+
   NVIC_InitStructure.NVIC_IRQChannel = USART2_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
   NVIC_Init(&NVIC_InitStructure);
 
   NVIC_InitStructure.NVIC_IRQChannel = EXTI_Illumination_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 3;
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
   NVIC_Init(&NVIC_InitStructure);
+
+  TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+ // TIM_ITConfig(TIM4, TIM_IT_Update, ENABLE);
 }
 
 void PWM_Configuration(void) {
@@ -250,19 +284,17 @@ void PWM_Configuration(void) {
 
 // Front Prox IRQHandler
 void EXTI9_5_IRQHandler(void) {
-  if (EXTI_GetITStatus(EXTI_Prox_Front_Line1) != RESET ||
-      EXTI_GetITStatus(EXTI_Prox_Front_Line2) != RESET) {
-    STOP();
-    TIM_Cmd(TIM2, DISABLE);
-
+  if (EXTI_GetITStatus(EXTI_Prox_Front_Line1) != RESET || EXTI_GetITStatus(EXTI_Prox_Front_Line2) != RESET) {
     isClockWise = 0;
-    while (GPIO_ReadInputDataBit(GPIO_Prox_Front_Port1, GPIO_Prox_Front_Pin1) ==
-               0 &&
-           GPIO_ReadInputDataBit(GPIO_Prox_Front_Port2, GPIO_Prox_Front_Pin2) ==
-               0) {
-      ONE_TICK_COUNTER_CLOCKWISE_ROTATION();
-    }
 
+    if(isRotate == 0) { 
+
+    isRotate = 1;
+    ONE_TICK_COUNTER_CLOCKWISE_ROTATION();
+    dir_Idx = (dir_Idx + 1) % 4;
+
+    inner_Map[inner_Map_Idx++] = global_Current_Point;
+    }
     /*
             EXTI_LineCmd(EXTI_Prox_Right_Line1, ENABLE);
             EXTI_LineCmd(EXTI_Prox_Right_Line2, ENABLE);
@@ -274,18 +306,16 @@ void EXTI9_5_IRQHandler(void) {
   }
 }
 
+/*
 // Right Prox IRQHandler
 void EXTI15_10_IRQHandler(void) {
-  if (EXTI_GetITStatus(EXTI_Prox_Right_Line1) != RESET ||
-      EXTI_GetITStatus(EXTI_Prox_Right_Line2) != RESET) {
+  if (EXTI_GetITStatus(EXTI_Prox_Right_Line1) != RESET || EXTI_GetITStatus(EXTI_Prox_Right_Line2) != RESET) {
     STOP();
     TIM_Cmd(TIM2, DISABLE);
 
     isClockWise = 1;
-    while (GPIO_ReadInputDataBit(GPIO_Prox_Right_Port1, GPIO_Prox_Right_Pin1) ==
-               1 &&
-           GPIO_ReadInputDataBit(GPIO_Prox_Right_Port2, GPIO_Prox_Right_Pin2) ==
-               1) {
+    while (GPIO_ReadInputDataBit(GPIO_Prox_Right_Port1, GPIO_Prox_Right_Pin1) == 1 &&
+           GPIO_ReadInputDataBit(GPIO_Prox_Right_Port2, GPIO_Prox_Right_Pin2) == 1) {
       ONE_TICK_CLOCKWISE_ROTATION();
     }
 
@@ -293,33 +323,14 @@ void EXTI15_10_IRQHandler(void) {
     EXTI_ClearITPendingBit(EXTI_Prox_Right_Line1);
   }
 }
+*/
 
 // Illumination IRQHandler
 void EXTI2_IRQHandler(void) {
   if (EXTI_GetITStatus(EXTI_Illumination_Line) != RESET) {
-    GPIO_EXTILineConfig(GPIO_Prox_Front_PortSource1, GPIO_Prox_Front_PinSource1);
-    EXTI_InitStructure.EXTI_Line = EXTI_Prox_Front_Line1;
-    EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-    EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
-    EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-    EXTI_Init(&EXTI_InitStructure);
 
-    GPIO_EXTILineConfig(GPIO_Prox_Front_PortSource2, GPIO_Prox_Front_PinSource2);
-    EXTI_InitStructure.EXTI_Line = EXTI_Prox_Front_Line2;
-    EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-    EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
-    EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-    EXTI_Init(&EXTI_InitStructure);
-    
-    GPIO_EXTILineConfig(GPIO_Illumination_PortSource,
-                      GPIO_Illumination_PinSource);
-  EXTI_InitStructure.EXTI_Line = EXTI_Illumination_Line;
-  EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
-  EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
-  EXTI_InitStructure.EXTI_LineCmd = DISABLE;
-  EXTI_Init(&EXTI_InitStructure);
-    
-    
+    isDark = 1;
+
     EXTI_ClearITPendingBit(EXTI_Illumination_Line);
   }
 }
@@ -327,8 +338,12 @@ void EXTI2_IRQHandler(void) {
 // Rotation Timer
 void TIM2_IRQHandler(void) {
   if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET) {
+
+    isRotate = 0;
+
+    global_Current_Point.x += dir[dir_Idx][0];
+    global_Current_Point.y += dir[dir_Idx][1];
     STOP();
-    global_Theta = (global_Theta + 1 * (isClockWise ? -1 : 1) + 360) % 360;
 
     TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
   }
@@ -338,9 +353,10 @@ void TIM2_IRQHandler(void) {
 void TIM4_IRQHandler(void) {
   if (TIM_GetITStatus(TIM4, TIM_IT_Update) != RESET) {
     STOP();
-    global_Current_Point.x += FORWARD_TICK * cosf(thetaToRad(global_Theta));
-    global_Current_Point.y += FORWARD_TICK * sinf(thetaToRad(global_Theta));
-
+    if(!isRotate) {
+      global_Current_Point.x += FORWARD_TICK * cosf(thetaToRad(global_Theta));
+      global_Current_Point.y += FORWARD_TICK * sinf(thetaToRad(global_Theta));
+    }
     TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
   }
 }
@@ -363,18 +379,6 @@ void USART2_IRQHandler() {
   if (USART_GetITStatus(USART2, USART_IT_RXNE) != RESET) {
     // the most recent received data by the USART2 peripheral
     word = USART_ReceiveData(USART2);
-
-    switch (word - '0') {
-      case 0:
-        COUNTER_CLOCKWISE_ROTATION();
-        break;
-      case 1:
-        CLOCKWISE_ROTATION();
-        break;
-
-      default:
-        break;
-    }
 
     USART_SendData(USART1, word);
 

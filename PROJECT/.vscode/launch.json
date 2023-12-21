@@ -1,0 +1,42 @@
+{
+  // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+  // 기존 특성에 대한 설명을 보려면 가리킵니다.
+  // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "cspy",
+      "request": "launch",
+      "name": "Launch: test.Debug",
+      "target": "arm",
+      "program": "${workspaceFolder}\\Debug\\Exe\\test.out",
+      "driver": "J-Link/J-Trace",
+      "stopOnSymbol": true,
+      "workbenchPath": "${command:iar-config.toolchain}",
+      "projectPath": "${workspaceFolder}\\test.ewp",
+      "projectConfiguration": "Debug",
+      "driverOptions": [
+        "--endian=little",
+        "--cpu=Cortex-M3",
+        "--fpu=None",
+        "-p",
+        "$TOOLKIT_DIR$\\CONFIG\\debugger\\ST\\STM32F107VC.ddf",
+        "--drv_verify_download",
+        "--semihosting",
+        "--device=STM32F107VC",
+        "--drv_communication=USB0",
+        "--drv_interface_speed=auto",
+        "--jlink_initial_speed=1000",
+        "--jlink_reset_strategy=0,0",
+        "--drv_catch_exceptions=0x000",
+        "--drv_swo_clock_setup=72000000,0,2000000"
+      ],
+      "download": {
+        "flashLoader": "$TOOLKIT_DIR$\\config\\flashloader\\ST\\FlashSTM32F105xC.board",
+        "deviceMacros": [
+          "$TOOLKIT_DIR$\\config\\debugger\\ST\\STM32F1xx.dmac"
+        ]
+      }
+    }
+  ]
+}

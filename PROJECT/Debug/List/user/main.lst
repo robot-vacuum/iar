@@ -1,49 +1,43 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM         21/Dec/2023  22:48:25
+# IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM         22/Dec/2023  05:46:08
 # Copyright 1999-2022 IAR Systems AB.
 #
 #    Cpu mode          =  thumb
 #    Endian            =  little
 #    Source file       =
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\user\main.c
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\user\main.c
 #    Command line      =
 #        -f
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\user\main.o.rsp
-#        (C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\user\main.c
-#        -D USE_STDPERIPH_DRIVER -D STM32F10X_CL -lC
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\List\user
-#        -o
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\user
-#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
-#        --no_clustering --no_scheduling --debug --endian=little
-#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files\IAR
-#        Systems\Embedded Workbench 9.1\arm\inc\c\DLib_Config_Normal.h" -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\CMSIS\DeviceSupport\
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\user\main.o.rsp
+#        (c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\user\main.c -D
+#        USE_STDPERIPH_DRIVER -D STM32F10X_CL -lC
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\List\user -o
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\user --no_cse
+#        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+#        --no_scheduling --debug --endian=little --cpu=Cortex-M3 -e --fpu=None
+#        --dlib_config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.1\arm\inc\c\DLib_Config_Normal.h" -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\CMSIS\DeviceSupport\
 #        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\CMSIS\DeviceSupport\Startup\
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\CMSIS\DeviceSupport\Startup\
 #        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\
 #        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\src\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\LCD\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\user\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\user\inc\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\USER\
-#        -Ol -I "C:\Program Files\IAR Systems\Embedded Workbench
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\src\
+#        -I c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\LCD\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\user\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\user\inc\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\USER\ -Ol -I
+#        "C:\Program Files\IAR Systems\Embedded Workbench
 #        9.1\arm\CMSIS\Core\Include\\") --dependencies=n
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\user\main.o.d
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\user\main.o.d
 #    Locale            =  C
 #    List file         =
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\List\user\main.lst
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\List\user\main.lst
 #    Object file       =
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\user\main.o
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\user\main.o
 #    Runtime model:       
 #      __CPP_Runtime   =  1
 #      __SystemLibrary =  DLib
@@ -51,268 +45,482 @@
 #
 ###############################################################################
 
-C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\user\main.c
-      1          #include "stm32f10x.h"
-      2          #include "core_cm3.h"
-      3          #include "misc.h"
-      4          #include "stm32f10x_gpio.h"
-      5          #include "stm32f10x_rcc.h"
-      6          #include "stm32f10x_usart.h"
-      7          #include "stm32f10x_adc.h"
-      8          #include "stm32f10x_tim.h"
-      9          #include "lcd.h"
-     10          #include "touch.h"
-     11          #include "configuration.h"
-     12          #include "definitions.h"
-     13          #include "map.h"
-     14          #include "motor.h"
-     15          #include "move.h"
-     16          #include <math.h>
-     17          
-
-   \                                 In section .bss, align 4
-     18          int isDark = 0;
-   \                     isDark:
-   \        0x0                      DS8 4
+c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\user\main.c
+      1          #include <math.h>
+      2          
+      3          #include "stm32f10x.h"
+      4          #include "configuration.h"
+      5          #include "core_cm3.h"
+      6          #include "definitions.h"
+      7          #include "lcd.h"
+      8          #include "map.h"
+      9          #include "misc.h"
+     10          #include "motor.h"
+     11          #include "move.h"
+     12          #include "stm32f10x_adc.h"
+     13          #include "stm32f10x_gpio.h"
+     14          #include "stm32f10x_rcc.h"
+     15          #include "stm32f10x_tim.h"
+     16          #include "stm32f10x_usart.h"
+     17          #include "touch.h"
+     18          
      19          
 
    \                                 In section .text, align 2, keep-with-next
-     20          void circulateTargetMap()
-     21          {
-   \                     circulateTargetMap: (+1)
-   \        0x0   0xB580             PUSH     {R7,LR}
-     22            
-     23            generalMove();
-   \        0x2   0x.... 0x....      BL       generalMove
-     24          }
-   \        0x6   0xBD01             POP      {R0,PC}
-     25          
-
-   \                                 In section .text, align 2, keep-with-next
-     26          void updateTargetMap()
-     27          {
-   \                     updateTargetMap: (+1)
-   \        0x0   0xB538             PUSH     {R3-R5,LR}
-     28            assignConvexHull(source_Map, &source_Map_size);
-   \        0x2   0x....             LDR.N    R4,??DataTable4
-   \        0x4   0x....             LDR.N    R5,??DataTable4_1
-   \        0x6   0x0029             MOVS     R1,R5
-   \        0x8   0x0020             MOVS     R0,R4
-   \        0xA   0x.... 0x....      BL       assignConvexHull
-     29            calcAndStoreMidPoints(source_Map, target_Map, &source_Map_size, &target_Map_size);
-   \        0xE   0x....             LDR.N    R3,??DataTable4_2
-   \       0x10   0x002A             MOVS     R2,R5
-   \       0x12   0x....             LDR.N    R1,??DataTable4_3
-   \       0x14   0x0020             MOVS     R0,R4
-   \       0x16   0x.... 0x....      BL       calcAndStoreMidPoints
-     30          }
-   \       0x1A   0xBD31             POP      {R0,R4,R5,PC}
-     31          
-
-   \                                 In section .text, align 2, keep-with-next
-     32          void sendTargetMap()
-     33          {
+     20          void sendTargetMap() {
    \                     sendTargetMap: (+1)
-   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
-     34            USART_SendData(USART2, target_Map_size);
-   \        0x2   0x....             LDR.N    R4,??DataTable4_4
-   \        0x4   0x....             LDR.N    R5,??DataTable4_2
-   \        0x6   0x6828             LDR      R0,[R5, #+0]
-   \        0x8   0x0001             MOVS     R1,R0
-   \        0xA   0xB289             UXTH     R1,R1
-   \        0xC   0x0020             MOVS     R0,R4
+   \        0x0   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \        0x4   0xB09A             SUB      SP,SP,#+104
+     21            char words[100];
+     22            int size = 0;
+   \        0x6   0x2000             MOVS     R0,#+0
+   \        0x8   0x9000             STR      R0,[SP, #+0]
+     23            
+     24            USART_SendData(USART2, (uint16_t)'S');
+   \        0xA   0x2153             MOVS     R1,#+83
+   \        0xC   0x....             LDR.N    R0,??DataTable6
    \        0xE   0x.... 0x....      BL       USART_SendData
-     35          
-     36            for(int i = 0; i < target_Map_size; i++)
-   \       0x12   0x2600             MOVS     R6,#+0
-   \       0x14   0xE014             B.N      ??sendTargetMap_0
-     37            {
-     38              USART_SendData(USART2, target_Map[i].x);
-                                            ^
-Warning[Pa093]: implicit conversion from floating point to integer
+     25            USARTDelay();
+   \       0x12   0x.... 0x....      BL       USARTDelay
+     26            integerToString(words, target_Map_size, &size);
+   \       0x16   0x....             LDR.N    R4,??DataTable6_1
+   \       0x18   0x466A             MOV      R2,SP
+   \       0x1A   0x6821             LDR      R1,[R4, #+0]
+   \       0x1C   0xA801             ADD      R0,SP,#+4
+   \       0x1E   0x.... 0x....      BL       integerToString
+     27            sendWords(words, size);
+   \       0x22   0x9900             LDR      R1,[SP, #+0]
+   \       0x24   0xA801             ADD      R0,SP,#+4
+   \       0x26   0x.... 0x....      BL       sendWords
+     28          
+     29            for (int i = 0; i < target_Map_size; i++) {
+   \       0x2A   0x2500             MOVS     R5,#+0
+   \       0x2C   0xE027             B.N      ??sendTargetMap_0
+     30              integerToString(words, (uint32_t)(target_Map[i].x * 1000), &size);
    \                     ??sendTargetMap_1: (+1)
-   \       0x16   0x....             LDR.N    R7,??DataTable4_3
-   \       0x18   0xF857 0x0036      LDR      R0,[R7, R6, LSL #+3]
-   \       0x1C   0x.... 0x....      BL       __aeabi_f2iz
-   \       0x20   0x0001             MOVS     R1,R0
-   \       0x22   0xB289             UXTH     R1,R1
-   \       0x24   0x0020             MOVS     R0,R4
-   \       0x26   0x.... 0x....      BL       USART_SendData
-     39              USART_SendData(USART2, target_Map[i].y);
-                                            ^
-Warning[Pa093]: implicit conversion from floating point to integer
-   \       0x2A   0xEB07 0x00C6      ADD      R0,R7,R6, LSL #+3
-   \       0x2E   0x6840             LDR      R0,[R0, #+4]
-   \       0x30   0x.... 0x....      BL       __aeabi_f2iz
-   \       0x34   0x0001             MOVS     R1,R0
-   \       0x36   0xB289             UXTH     R1,R1
-   \       0x38   0x0020             MOVS     R0,R4
-   \       0x3A   0x.... 0x....      BL       USART_SendData
-     40            }
-   \       0x3E   0x1C76             ADDS     R6,R6,#+1
+   \       0x2E   0x....             LDR.N    R6,??DataTable6_2
+   \       0x30   0x....             LDR.N    R7,??DataTable6_3
+   \       0x32   0x466A             MOV      R2,SP
+   \       0x34   0x4690             MOV      R8,R2
+   \       0x36   0xF857 0x1035      LDR      R1,[R7, R5, LSL #+3]
+   \       0x3A   0x0030             MOVS     R0,R6
+   \       0x3C   0x.... 0x....      BL       __aeabi_fmul
+   \       0x40   0x.... 0x....      BL       __aeabi_f2uiz
+   \       0x44   0x0001             MOVS     R1,R0
+   \       0x46   0x4642             MOV      R2,R8
+   \       0x48   0xA801             ADD      R0,SP,#+4
+   \       0x4A   0x.... 0x....      BL       integerToString
+     31              sendWords(words, size);
+   \       0x4E   0x9900             LDR      R1,[SP, #+0]
+   \       0x50   0xA801             ADD      R0,SP,#+4
+   \       0x52   0x.... 0x....      BL       sendWords
+     32              integerToString(words, (uint32_t)(target_Map[i].y * 1000), &size);
+   \       0x56   0x466A             MOV      R2,SP
+   \       0x58   0x4690             MOV      R8,R2
+   \       0x5A   0xEB07 0x00C5      ADD      R0,R7,R5, LSL #+3
+   \       0x5E   0x6841             LDR      R1,[R0, #+4]
+   \       0x60   0x0030             MOVS     R0,R6
+   \       0x62   0x.... 0x....      BL       __aeabi_fmul
+   \       0x66   0x.... 0x....      BL       __aeabi_f2uiz
+   \       0x6A   0x0001             MOVS     R1,R0
+   \       0x6C   0x4642             MOV      R2,R8
+   \       0x6E   0xA801             ADD      R0,SP,#+4
+   \       0x70   0x.... 0x....      BL       integerToString
+     33              sendWords(words, size);
+   \       0x74   0x9900             LDR      R1,[SP, #+0]
+   \       0x76   0xA801             ADD      R0,SP,#+4
+   \       0x78   0x.... 0x....      BL       sendWords
+     34            }
+   \       0x7C   0x1C6D             ADDS     R5,R5,#+1
    \                     ??sendTargetMap_0: (+1)
-   \       0x40   0x6828             LDR      R0,[R5, #+0]
-   \       0x42   0x4286             CMP      R6,R0
-   \       0x44   0xDBE7             BLT.N    ??sendTargetMap_1
+   \       0x7E   0x6820             LDR      R0,[R4, #+0]
+   \       0x80   0x4285             CMP      R5,R0
+   \       0x82   0xDBD4             BLT.N    ??sendTargetMap_1
+     35          }
+   \       0x84   0xB01A             ADD      SP,SP,#+104
+   \       0x86   0xE8BD 0x81F0      POP      {R4-R8,PC}
+     36          
+
+   \                                 In section .text, align 2, keep-with-next
+     37          void USARTDelay() {
+     38            uint32_t i;
+     39            for (i = 0; i < 1000000; i++)
+   \                     USARTDelay: (+1)
+   \        0x0   0x2000             MOVS     R0,#+0
+   \        0x2   0xE000             B.N      ??USARTDelay_0
+   \                     ??USARTDelay_1: (+1)
+   \        0x4   0x1C40             ADDS     R0,R0,#+1
+   \                     ??USARTDelay_0: (+1)
+   \        0x6   0x....             LDR.N    R1,??DataTable6_4
+   \        0x8   0x4288             CMP      R0,R1
+   \        0xA   0xD3FB             BCC.N    ??USARTDelay_1
+     40              ;
      41          }
-   \       0x46   0xBDF1             POP      {R0,R4-R7,PC}
+   \        0xC   0x4770             BX       LR
      42          
 
    \                                 In section .text, align 2, keep-with-next
-     43          void setNextPoint()
-     44          {
-     45            global_Next_Point = target_Map[target_Map_Idx++];
+     43          void circulateTargetMap() { generalMove(); }
+   \                     circulateTargetMap: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       generalMove
+   \        0x6   0xBD01             POP      {R0,PC}
+     44          
+
+   \                                 In section .text, align 2, keep-with-next
+     45          void integerToString(char *words, uint32_t num, int *size)
+     46          {
+   \                     integerToString: (+1)
+   \        0x0   0xB430             PUSH     {R4,R5}
+     47            int i = 0;
+   \        0x2   0x2300             MOVS     R3,#+0
+     48            if(num == 0) {
+   \        0x4   0x2900             CMP      R1,#+0
+   \        0x6   0xD10E             BNE.N    ??integerToString_0
+     49              words[i++] = '0';
+   \        0x8   0x2130             MOVS     R1,#+48
+   \        0xA   0x54C1             STRB     R1,[R0, R3]
+   \        0xC   0x1C5B             ADDS     R3,R3,#+1
+   \        0xE   0xE00C             B.N      ??integerToString_1
+     50            } else {
+     51              while(num > 0) {
+     52                words[i++] = (char)(num % 10 + '0');
+   \                     ??integerToString_2: (+1)
+   \       0x10   0x240A             MOVS     R4,#+10
+   \       0x12   0xFBB1 0xF5F4      UDIV     R5,R1,R4
+   \       0x16   0xFB04 0x1415      MLS      R4,R4,R5,R1
+   \       0x1A   0x3430             ADDS     R4,R4,#+48
+   \       0x1C   0x54C4             STRB     R4,[R0, R3]
+   \       0x1E   0x1C5B             ADDS     R3,R3,#+1
+     53                num /= 10;
+   \       0x20   0x240A             MOVS     R4,#+10
+   \       0x22   0xFBB1 0xF1F4      UDIV     R1,R1,R4
+     54              }
+   \                     ??integerToString_0: (+1)
+   \       0x26   0x2900             CMP      R1,#+0
+   \       0x28   0xD1F2             BNE.N    ??integerToString_2
+     55            }
+     56            
+     57            *size = i;
+   \                     ??integerToString_1: (+1)
+   \       0x2A   0x6013             STR      R3,[R2, #+0]
+     58          }
+   \       0x2C   0xBC30             POP      {R4,R5}
+   \       0x2E   0x4770             BX       LR
+     59          
+
+   \                                 In section .text, align 2, keep-with-next
+     60          void updateTargetMap() {
+   \                     updateTargetMap: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+     61            assignConvexHull(source_Map, &source_Map_size);
+   \        0x2   0x....             LDR.N    R4,??DataTable6_5
+   \        0x4   0x....             LDR.N    R5,??DataTable6_6
+   \        0x6   0x0029             MOVS     R1,R5
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x.... 0x....      BL       assignConvexHull
+     62            calcAndStoreMidPoints(source_Map, target_Map, &source_Map_size, &target_Map_size);
+   \        0xE   0x....             LDR.N    R3,??DataTable6_1
+   \       0x10   0x002A             MOVS     R2,R5
+   \       0x12   0x....             LDR.N    R1,??DataTable6_3
+   \       0x14   0x0020             MOVS     R0,R4
+   \       0x16   0x.... 0x....      BL       calcAndStoreMidPoints
+     63          }
+   \       0x1A   0xBD31             POP      {R0,R4,R5,PC}
+     64          
+
+   \                                 In section .text, align 2, keep-with-next
+     65          void sendWords(char *words, int size)
+     66          {
+   \                     sendWords: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+     67            for(int i = 0; i < size; ++i) {
+   \        0x6   0x2600             MOVS     R6,#+0
+   \        0x8   0xE007             B.N      ??sendWords_0
+     68              USART_SendData(USART2, (uint16_t)words[i]);
+   \                     ??sendWords_1: (+1)
+   \        0xA   0x5DA1             LDRB     R1,[R4, R6]
+   \        0xC   0xB289             UXTH     R1,R1
+   \        0xE   0x....             LDR.N    R0,??DataTable6
+   \       0x10   0x.... 0x....      BL       USART_SendData
+     69              USARTDelay();
+   \       0x14   0x.... 0x....      BL       USARTDelay
+     70            }
+   \       0x18   0x1C76             ADDS     R6,R6,#+1
+   \                     ??sendWords_0: (+1)
+   \       0x1A   0x42AE             CMP      R6,R5
+   \       0x1C   0xDBF5             BLT.N    ??sendWords_1
+     71            USART_SendData(USART2, (uint16_t)'\n');  
+   \       0x1E   0x210A             MOVS     R1,#+10
+   \       0x20   0x....             LDR.N    R0,??DataTable6
+   \       0x22   0x.... 0x....      BL       USART_SendData
+     72            USARTDelay();    
+   \       0x26   0x.... 0x....      BL       USARTDelay
+     73          }
+   \       0x2A   0xBD70             POP      {R4-R6,PC}
+     74          
+
+   \                                 In section .text, align 2, keep-with-next
+     75          void sendCurrentPoint(Point current_Point)
+     76          {
+   \                     sendCurrentPoint: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0xB09A             SUB      SP,SP,#+104
+   \        0x4   0x0004             MOVS     R4,R0
+   \        0x6   0x000D             MOVS     R5,R1
+     77            char words[100];
+     78            int size = 0;
+   \        0x8   0x2000             MOVS     R0,#+0
+   \        0xA   0x9000             STR      R0,[SP, #+0]
+     79          
+     80            USART_SendData(USART2, (uint16_t)'S');
+   \        0xC   0x2153             MOVS     R1,#+83
+   \        0xE   0x....             LDR.N    R0,??DataTable6
+   \       0x10   0x.... 0x....      BL       USART_SendData
+     81            USARTDelay();
+   \       0x14   0x.... 0x....      BL       USARTDelay
+     82          
+     83            integerToString(words, (uint32_t)(ceilf(current_Point.x) * 1000), &size);
+   \       0x18   0x0020             MOVS     R0,R4
+   \       0x1A   0x.... 0x....      BL       ceilf
+   \       0x1E   0x0001             MOVS     R1,R0
+   \       0x20   0x....             LDR.N    R6,??DataTable6_2
+   \       0x22   0x466A             MOV      R2,SP
+   \       0x24   0x0017             MOVS     R7,R2
+   \       0x26   0x0030             MOVS     R0,R6
+   \       0x28   0x.... 0x....      BL       __aeabi_fmul
+   \       0x2C   0x.... 0x....      BL       __aeabi_f2uiz
+   \       0x30   0x0001             MOVS     R1,R0
+   \       0x32   0x003A             MOVS     R2,R7
+   \       0x34   0xA801             ADD      R0,SP,#+4
+   \       0x36   0x.... 0x....      BL       integerToString
+     84            sendWords(words, size);
+   \       0x3A   0x9900             LDR      R1,[SP, #+0]
+   \       0x3C   0xA801             ADD      R0,SP,#+4
+   \       0x3E   0x.... 0x....      BL       sendWords
+     85            integerToString(words, (uint32_t)(ceilf(current_Point.y) * 1000), &size);
+   \       0x42   0x0028             MOVS     R0,R5
+   \       0x44   0x.... 0x....      BL       ceilf
+   \       0x48   0x466A             MOV      R2,SP
+   \       0x4A   0x0014             MOVS     R4,R2
+   \       0x4C   0x0031             MOVS     R1,R6
+   \       0x4E   0x.... 0x....      BL       __aeabi_fmul
+   \       0x52   0x.... 0x....      BL       __aeabi_f2uiz
+   \       0x56   0x0001             MOVS     R1,R0
+   \       0x58   0x0022             MOVS     R2,R4
+   \       0x5A   0xA801             ADD      R0,SP,#+4
+   \       0x5C   0x.... 0x....      BL       integerToString
+     86            sendWords(words, size);
+   \       0x60   0x9900             LDR      R1,[SP, #+0]
+   \       0x62   0xA801             ADD      R0,SP,#+4
+   \       0x64   0x.... 0x....      BL       sendWords
+     87          }
+   \       0x68   0xB01B             ADD      SP,SP,#+108
+   \       0x6A   0xBDF0             POP      {R4-R7,PC}
+     88          
+
+   \                                 In section .text, align 2, keep-with-next
+     89          void setNextPoint() { global_Next_Point = target_Map[target_Map_Idx++]; }
    \                     setNextPoint: (+1)
-   \        0x0   0x....             LDR.N    R0,??DataTable4_5
-   \        0x2   0x....             LDR.N    R1,??DataTable4_3
+   \        0x0   0x....             LDR.N    R0,??DataTable6_7
+   \        0x2   0x....             LDR.N    R1,??DataTable6_3
    \        0x4   0x6802             LDR      R2,[R0, #+0]
    \        0x6   0xEB01 0x01C2      ADD      R1,R1,R2, LSL #+3
    \        0xA   0xE9D1 0x2300      LDRD     R2,R3,[R1, #+0]
-   \        0xE   0x....             LDR.N    R1,??DataTable4_6
+   \        0xE   0x....             LDR.N    R1,??DataTable6_8
    \       0x10   0xE9C1 0x2300      STRD     R2,R3,[R1, #+0]
    \       0x14   0x6801             LDR      R1,[R0, #+0]
    \       0x16   0x1C49             ADDS     R1,R1,#+1
    \       0x18   0x6001             STR      R1,[R0, #+0]
-     46          }
    \       0x1A   0x4770             BX       LR
-     47          
+     90          
 
    \                                 In section .text, align 2, keep-with-next
-     48          int main(void)
-     49          {
+     91          int main(void) {
    \                     main: (+1)
-   \        0x0   0xB580             PUSH     {R7,LR}
-     50              RCC_Configuration();
+   \        0x0   0xB510             PUSH     {R4,LR}
+     92            RCC_Configuration();
    \        0x2   0x.... 0x....      BL       RCC_Configuration
-     51              GPIO_Configuration();
+     93            GPIO_Configuration();
    \        0x6   0x.... 0x....      BL       GPIO_Configuration
-     52              EXTI_Configure();
+     94            EXTI_Configure();
    \        0xA   0x.... 0x....      BL       EXTI_Configure
-     53              USART12_Init();
+     95            USART12_Init();
    \        0xE   0x.... 0x....      BL       USART12_Init
-     54              NVIC_Configuration();
-   \       0x12   0x.... 0x....      BL       NVIC_Configuration
-     55              PWM_Configuration();
-   \       0x16   0x.... 0x....      BL       PWM_Configuration
-     56              
-     57              TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
-   \       0x1A   0x2201             MOVS     R2,#+1
-   \       0x1C   0x2101             MOVS     R1,#+1
-   \       0x1E   0xF05F 0x4080      MOVS     R0,#+1073741824
-   \       0x22   0x.... 0x....      BL       TIM_ITConfig
-     58              TIM_ITConfig(TIM4, TIM_IT_Update, ENABLE);
-   \       0x26   0x2201             MOVS     R2,#+1
-   \       0x28   0x2101             MOVS     R1,#+1
-   \       0x2A   0x....             LDR.N    R0,??DataTable4_7
-   \       0x2C   0x.... 0x....      BL       TIM_ITConfig
-     59              
-     60              Point current_Loc = {0, 0};
-                           ^
-Warning[Pe177]: variable "current_Loc" was declared but never referenced
-   \       0x30   0x....             LDR.N    R2,??DataTable4_8
-   \       0x32   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
-     61              
-     62              //initMap(source_Map, &source_Map_size, &source_Map_Idx);
-     63              
-     64              //ONE_TICK_FORWARD();
-     65              
-     66              //FORWARD();
-     67           
-     68          
-     69              ONE_TICK_CLOCKWISE_ROTATION();
-   \       0x36   0x.... 0x....      BL       ONE_TICK_CLOCKWISE_ROTATION
-     70              
-     71              while(1)
+     96            PWM_Configuration();
+   \       0x12   0x.... 0x....      BL       PWM_Configuration
+     97            NVIC_Configuration();
+   \       0x16   0x.... 0x....      BL       NVIC_Configuration
+   \       0x1A   0xE7FF             B.N      ??main_0
+     98          
+     99          
+    100            while (1) {
+    101              if(!isDark) continue;
+   \                     ??main_1: (+1)
    \                     ??main_0: (+1)
-   \       0x3A   0xE7FE             B.N      ??main_0
-     72              {
-     73                /*
-     74                if(isDark == 0) continue;
-     75          
-     76                EXTI_LineCmd(EXTI_Illumination_Line, DISABLE);
-     77          
-     78                initMap(source_Map, &source_Map_size, &source_Map_Idx);
-     79                initMap(target_Map, &target_Map_size, &target_Map_Idx);
-     80                global_Theta = 0;
-     81                global_Current_Point.x = 0; global_Current_Point.y = 0;
-     82          
-     83                while(target_Map_size > 2) 
-     84                {
-     85                  circulateTargetMap();
-     86                  updateTargetMap();
-     87                  sendTargetMap();
-     88                }
-     89          
-     90                isDark = 0;
-     91                EXTI_LineCmd(EXTI_Illumination_Line, ENABLE);
-     92          
-     93                */
-     94              }
-     95          }
-
-   \                                 In section .rodata, align 4
-   \                     ?_0:
-   \        0x0   0x0000'0000        DC32 0x0, 0x0
-
-   \              0x0000'0000
+   \       0x1C   0x....             LDR.N    R0,??DataTable6_9
+   \       0x1E   0x6800             LDR      R0,[R0, #+0]
+   \       0x20   0x2800             CMP      R0,#+0
+   \       0x22   0xD0FB             BEQ.N    ??main_1
+    102          
+    103              global_Theta = 0;
+   \       0x24   0x2000             MOVS     R0,#+0
+   \       0x26   0x....             LDR.N    R1,??DataTable6_10
+   \       0x28   0x6008             STR      R0,[R1, #+0]
+    104              global_Current_Point.x = 0; global_Current_Point.y = 0;
+   \       0x2A   0x....             LDR.N    R0,??DataTable6_11
+   \       0x2C   0x2100             MOVS     R1,#+0
+   \       0x2E   0x6001             STR      R1,[R0, #+0]
+   \       0x30   0x2100             MOVS     R1,#+0
+   \       0x32   0x6041             STR      R1,[R0, #+4]
+   \       0x34   0xE7FF             B.N      ??main_2
+    105          
+    106          
+    107              while(1)
+    108              {
+    109                if(isRotate) continue;
+   \                     ??main_3: (+1)
+   \                     ??main_2: (+1)
+   \       0x36   0x....             LDR.N    R0,??DataTable6_12
+   \       0x38   0x6800             LDR      R0,[R0, #+0]
+   \       0x3A   0x2800             CMP      R0,#+0
+   \       0x3C   0xD1FB             BNE.N    ??main_3
+    110          
+    111                FORWARD();
+   \       0x3E   0x.... 0x....      BL       FORWARD
+    112                delay();
+   \       0x42   0x.... 0x....      BL       delay
+    113              
+    114                if(inner_Map_Idx > 5) {
+   \       0x46   0x....             LDR.N    R4,??DataTable6_13
+   \       0x48   0x6820             LDR      R0,[R4, #+0]
+   \       0x4A   0x2806             CMP      R0,#+6
+   \       0x4C   0xDBF3             BLT.N    ??main_2
+    115                  while(inner_Map_Idx > 0) {
+   \                     ??main_4: (+1)
+   \       0x4E   0x6820             LDR      R0,[R4, #+0]
+   \       0x50   0x2801             CMP      R0,#+1
+   \       0x52   0xDBF0             BLT.N    ??main_2
+    116                    sendCurrentPoint(inner_Map[--inner_Map_Idx]);
+   \       0x54   0x6820             LDR      R0,[R4, #+0]
+   \       0x56   0x1E40             SUBS     R0,R0,#+1
+   \       0x58   0x6020             STR      R0,[R4, #+0]
+   \       0x5A   0x....             LDR.N    R0,??DataTable6_14
+   \       0x5C   0x6821             LDR      R1,[R4, #+0]
+   \       0x5E   0xEB00 0x02C1      ADD      R2,R0,R1, LSL #+3
+   \       0x62   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
+   \       0x66   0x.... 0x....      BL       sendCurrentPoint
+   \       0x6A   0xE7F0             B.N      ??main_4
+    117                  }
+    118                }
+    119              }
+    120          
+    121              isDark = 0;
+                     ^
+Warning[Pe111]: statement is unreachable
+    122              EXTI_Cmd(EXTI_Illumination_Line, ENABLE);
+    123          
+    124            }
+    125          }
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable4:
-   \        0x0   0x....'....        DC32     source_Map
-
-   \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable4_1:
-   \        0x0   0x....'....        DC32     source_Map_size
-
-   \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable4_2:
-   \        0x0   0x....'....        DC32     target_Map_size
-
-   \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable4_3:
-   \        0x0   0x....'....        DC32     target_Map
-
-   \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable4_4:
+   \                     ??DataTable6:
    \        0x0   0x4000'4400        DC32     0x40004400
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable4_5:
+   \                     ??DataTable6_1:
+   \        0x0   0x....'....        DC32     target_Map_size
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_2:
+   \        0x0   0x447A'0000        DC32     0x447a0000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_3:
+   \        0x0   0x....'....        DC32     target_Map
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_4:
+   \        0x0   0x000F'4240        DC32     0xf4240
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_5:
+   \        0x0   0x....'....        DC32     source_Map
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_6:
+   \        0x0   0x....'....        DC32     source_Map_size
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_7:
    \        0x0   0x....'....        DC32     target_Map_Idx
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable4_6:
+   \                     ??DataTable6_8:
    \        0x0   0x....'....        DC32     global_Next_Point
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable4_7:
-   \        0x0   0x4000'0800        DC32     0x40000800
+   \                     ??DataTable6_9:
+   \        0x0   0x....'....        DC32     isDark
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable4_8:
-   \        0x0   0x....'....        DC32     ?_0
-     96          
-     97          
-     98          
+   \                     ??DataTable6_10:
+   \        0x0   0x....'....        DC32     global_Theta
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_11:
+   \        0x0   0x....'....        DC32     global_Current_Point
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_12:
+   \        0x0   0x....'....        DC32     isRotate
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_13:
+   \        0x0   0x....'....        DC32     inner_Map_Idx
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6_14:
+   \        0x0   0x....'....        DC32     inner_Map
 
    Maximum stack usage in bytes:
 
    .cstack Function
    ------- --------
+       0   USARTDelay
        8   circulateTargetMap
          8   -> generalMove
+       8   integerToString
        8   main
          8   -> EXTI_Configure
+         8   -> FORWARD
          8   -> GPIO_Configuration
          8   -> NVIC_Configuration
-         8   -> ONE_TICK_CLOCKWISE_ROTATION
          8   -> PWM_Configuration
          8   -> RCC_Configuration
-         8   -> TIM_ITConfig
          8   -> USART12_Init
-      24   sendTargetMap
-        24   -> USART_SendData
-        24   -> __aeabi_f2iz
+         8   -> delay
+         8   -> sendCurrentPoint
+     128   sendCurrentPoint
+       128   -> USARTDelay
+       128   -> USART_SendData
+       128   -> __aeabi_f2uiz
+       128   -> __aeabi_fmul
+       128   -> ceilf
+       128   -> integerToString
+       128   -> sendWords
+     128   sendTargetMap
+       128   -> USARTDelay
+       128   -> USART_SendData
+       128   -> __aeabi_f2uiz
+       128   -> __aeabi_fmul
+       128   -> integerToString
+       128   -> sendWords
+      16   sendWords
+        16   -> USARTDelay
+        16   -> USART_SendData
        0   setNextPoint
       16   updateTargetMap
         16   -> assignConvexHull
@@ -323,31 +531,35 @@ Warning[Pe177]: variable "current_Loc" was declared but never referenced
 
    Bytes  Function/Label
    -----  --------------
-       4  ??DataTable4
-       4  ??DataTable4_1
-       4  ??DataTable4_2
-       4  ??DataTable4_3
-       4  ??DataTable4_4
-       4  ??DataTable4_5
-       4  ??DataTable4_6
-       4  ??DataTable4_7
-       4  ??DataTable4_8
-       8  ?_0
+       4  ??DataTable6
+       4  ??DataTable6_1
+       4  ??DataTable6_10
+       4  ??DataTable6_11
+       4  ??DataTable6_12
+       4  ??DataTable6_13
+       4  ??DataTable6_14
+       4  ??DataTable6_2
+       4  ??DataTable6_3
+       4  ??DataTable6_4
+       4  ??DataTable6_5
+       4  ??DataTable6_6
+       4  ??DataTable6_7
+       4  ??DataTable6_8
+       4  ??DataTable6_9
+      14  USARTDelay
        8  circulateTargetMap
-       4  isDark
-      60  main
-      72  sendTargetMap
+      48  integerToString
+     108  main
+     108  sendCurrentPoint
+     138  sendTargetMap
+      44  sendWords
       28  setNextPoint
       28  updateTargetMap
 
  
-   4 bytes in section .bss
-   8 bytes in section .rodata
- 232 bytes in section .text
+ 584 bytes in section .text
  
- 232 bytes of CODE  memory
-   8 bytes of CONST memory
-   4 bytes of DATA  memory
+ 584 bytes of CODE memory
 
 Errors: none
-Warnings: 3
+Warnings: 1

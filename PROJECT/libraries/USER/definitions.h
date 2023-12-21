@@ -53,7 +53,7 @@
 
 #define EXTI_Illumination_IRQn EXTI2_IRQn
 
-#define ONE_TICK 100 * 360
+#define ONE_TICK 105 * 90
 
 #define M_PI 3.1415
 

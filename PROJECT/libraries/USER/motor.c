@@ -1,5 +1,9 @@
 #include "motor.h"
+
 #include "definitions.h"
+
+int isFroward = 0;
+int isRotate = 0;
 
 void delay() {
   int i;
@@ -68,13 +72,12 @@ void ONE_TICK_FORWARD(void) {
 }
 
 void ONE_TICK_CLOCKWISE_ROTATION(void) {
+  
   TIM_SetCounter(TIM2, ONE_TICK);
-  isClockWise = 1;
   CLOCKWISE_ROTATION();
 }
 
 void ONE_TICK_COUNTER_CLOCKWISE_ROTATION(void) {
   TIM_SetCounter(TIM2, ONE_TICK);
-  isClockWise = 0;
   COUNTER_CLOCKWISE_ROTATION();
 }

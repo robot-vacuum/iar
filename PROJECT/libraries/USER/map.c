@@ -1,4 +1,5 @@
 #include "map.h"
+
 #include <math.h>
 
 Point source_Map[MAP_SIZE];
@@ -9,7 +10,7 @@ Point target_Map[MAP_SIZE];
 int target_Map_size;
 int target_Map_Idx = 0;
 
-const Point init_map[4] = {{0, 0}, {0, Y_MAX}, {X_MAX, Y_MAX}, {X_MAX, 0}};
+const Point init_map[4] = {{0, 0}, {X_MAX, 0}, {X_MAX, Y_MAX}, {0, Y_MAX}};
 
 static Point stack[MAP_SIZE];
 static int stack_top = 0;
@@ -27,14 +28,13 @@ int getCCW(Point p1, Point p2, Point p3) {
   return 0;
 }
 
-float getDistance(Point p1, Point p2) {
-  return sqrtf(powf(p1.x - p2.x, 2) + powf(p1.y - p2.y, 2));
-}
+float getDistance(Point p1, Point p2) { return sqrtf(powf(p1.x - p2.x, 2) + powf(p1.y - p2.y, 2)); }
 
 void initMap(Point *map, int *map_size, int *map_Idx) {
   int size = *map_size = 4;
 
-  for (*map_Idx = 0; *map_Idx < size; (*map_Idx)++) {
+  for (*map_Idx = -1; *map_Idx - 1 < size; ) {
+    (*map_Idx)++;
     map[*map_Idx] = init_map[*map_Idx];
   }
 }
@@ -95,8 +95,7 @@ void assignConvexHull(Point *map, int *map_size) {
   stack[stack_top++] = map[0];
   stack[stack_top++] = map[1];
   for (int i = 2; i < size; i++) {
-    while (stack_top >= 2 &&
-           getCCW(stack[stack_top - 2], stack[stack_top - 1], map[i]) <= 0) {
+    while (stack_top >= 2 && getCCW(stack[stack_top - 2], stack[stack_top - 1], map[i]) <= 0) {
       stack_top--;
     }
     stack[stack_top++] = map[i];
@@ -112,26 +111,20 @@ void assignConvexHull(Point *map, int *map_size) {
   stack_top = 0;
 }
 
-void calcAndStoreMidPoints(Point *map_Source, Point *map_Target,
-                           const int *map_SourceSize, int *map_TargetSize) {
+void calcAndStoreMidPoints(Point *map_Source, Point *map_Target, const int *map_SourceSize, int *map_TargetSize) {
   int size = *map_SourceSize;
-  int targetIndex = 0;
+  int targetIndex = -1;
 
   for (int i = 0; i < size; i++) {
     Point midPoint;
-    midPoint.x =
-        (map_Source[(i - 1 + size) % size].x + map_Source[(i + 1) % size].x) /
-        2;
-    midPoint.y =
-        (map_Source[(i - 1 + size) % size].y + map_Source[(i + 1) % size].y) /
-        2;
+    midPoint.x = (map_Source[(i - 1 + size) % size].x + map_Source[(i + 1) % size].x) / 2;
+    midPoint.y = (map_Source[(i - 1 + size) % size].y + map_Source[(i + 1) % size].y) / 2;
 
-    if (targetIndex == 0 ||
-        getDistance(midPoint, map_Target[targetIndex - 1]) > THRESHOLD) {
-      map_Target[targetIndex++] = midPoint;
+    if (targetIndex == -1 || getDistance(midPoint, map_Target[targetIndex - 1]) > THRESHOLD) {
+      map_Target[++targetIndex] = midPoint;
     }
   }
 
-  *map_TargetSize = targetIndex;
+  target_Map_Idx = targetIndex;
+  *map_TargetSize = targetIndex + 1;
 }
-

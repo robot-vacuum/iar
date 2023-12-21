@@ -1,49 +1,44 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM         21/Dec/2023  20:35:33
+# IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM         22/Dec/2023  02:57:06
 # Copyright 1999-2022 IAR Systems AB.
 #
 #    Cpu mode          =  thumb
 #    Endian            =  little
 #    Source file       =
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\USER\map.c
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\USER\map.c
 #    Command line      =
 #        -f
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\libraries\USER\map.o.rsp
-#        (C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\USER\map.c
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\libraries\USER\map.o.rsp
+#        (c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\USER\map.c
 #        -D USE_STDPERIPH_DRIVER -D STM32F10X_CL -lC
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\List\libraries\USER
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\List\libraries\USER
 #        -o
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\libraries\USER
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\libraries\USER
 #        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 #        --no_clustering --no_scheduling --debug --endian=little
 #        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files\IAR
 #        Systems\Embedded Workbench 9.1\arm\inc\c\DLib_Config_Normal.h" -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\CMSIS\DeviceSupport\
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\CMSIS\DeviceSupport\
 #        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\CMSIS\DeviceSupport\Startup\
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\CMSIS\DeviceSupport\Startup\
 #        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\
 #        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\src\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\LCD\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\user\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\user\inc\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\USER\
-#        -Ol -I "C:\Program Files\IAR Systems\Embedded Workbench
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\src\
+#        -I c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\LCD\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\user\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\user\inc\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\USER\ -Ol -I
+#        "C:\Program Files\IAR Systems\Embedded Workbench
 #        9.1\arm\CMSIS\Core\Include\\") --dependencies=n
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\libraries\USER\map.o.d
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\libraries\USER\map.o.d
 #    Locale            =  C
 #    List file         =
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\List\libraries\USER\map.lst
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\List\libraries\USER\map.lst
 #    Object file       =
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\libraries\USER\map.o
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\libraries\USER\map.o
 #    Runtime model:       
 #      __CPP_Runtime   =  1
 #      __SystemLibrary =  DLib
@@ -51,75 +46,76 @@
 #
 ###############################################################################
 
-C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\USER\map.c
+c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\USER\map.c
       1          #include "map.h"
-      2          #include <math.h>
-      3          
+      2          
+      3          #include <math.h>
+      4          
 
    \                                 In section .bss, align 4
-      4          Point source_Map[MAP_SIZE];
+      5          Point source_Map[MAP_SIZE];
    \                     source_Map:
    \        0x0                      DS8 800
 
    \                                 In section .bss, align 4
-      5          int source_Map_size;
+      6          int source_Map_size;
    \                     source_Map_size:
    \        0x0                      DS8 4
 
    \                                 In section .bss, align 4
-      6          int source_Map_Idx = 0;
+      7          int source_Map_Idx = 0;
    \                     source_Map_Idx:
    \        0x0                      DS8 4
-      7          
+      8          
 
    \                                 In section .bss, align 4
-      8          Point target_Map[MAP_SIZE];
+      9          Point target_Map[MAP_SIZE];
    \                     target_Map:
    \        0x0                      DS8 800
 
    \                                 In section .bss, align 4
-      9          int target_Map_size;
+     10          int target_Map_size;
    \                     target_Map_size:
    \        0x0                      DS8 4
 
    \                                 In section .bss, align 4
-     10          int target_Map_Idx = 0;
+     11          int target_Map_Idx = 0;
    \                     target_Map_Idx:
    \        0x0                      DS8 4
-     11          
+     12          
 
    \                                 In section .rodata, align 4
-     12          const Point init_map[4] = {{0, 0}, {0, Y_MAX}, {X_MAX, Y_MAX}, {X_MAX, 0}};
+     13          const Point init_map[4] = {{0, 0}, {X_MAX, 0}, {X_MAX, Y_MAX}, {0, Y_MAX}};
    \                     init_map:
-   \        0x0   0x0000'0000        DC32 0x0, 0x0, 0x0, 0x447a'0000, 0x447a'0000, 0x447a'0000, 0x447a'0000
+   \        0x0   0x0000'0000        DC32 0x0, 0x0, 0x447a'0000, 0x0, 0x447a'0000, 0x447a'0000, 0x0
 
    \              0x0000'0000  
 
+   \              0x447A'0000  
+
    \              0x0000'0000  
 
    \              0x447A'0000  
 
    \              0x447A'0000  
 
-   \              0x447A'0000  
-
-   \              0x447A'0000
-   \       0x1C   0x0000'0000        DC32 0x0
-     13          
+   \              0x0000'0000
+   \       0x1C   0x447A'0000        DC32 0x447a'0000
+     14          
 
    \                                 In section .bss, align 4
-     14          static Point stack[MAP_SIZE];
+     15          static Point stack[MAP_SIZE];
    \                     stack:
    \        0x0                      DS8 800
 
    \                                 In section .bss, align 4
-     15          static int stack_top = 0;
+     16          static int stack_top = 0;
    \                     stack_top:
    \        0x0                      DS8 4
-     16          
+     17          
 
    \                                 In section .text, align 2, keep-with-next
-     17          int getCCW(Point p1, Point p2, Point p3) {
+     18          int getCCW(Point p1, Point p2, Point p3) {
    \                     getCCW: (+1)
    \        0x0   0xE92D 0x4FF8      PUSH     {R3-R11,LR}
    \        0x4   0x4680             MOV      R8,R0
@@ -127,7 +123,7 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
    \        0x8   0x0014             MOVS     R4,R2
    \        0xA   0x001D             MOVS     R5,R3
    \        0xC   0xE9DD 0x670A      LDRD     R6,R7,[SP, #+40]
-     18            float temp = p1.x * p2.y - p1.y * p2.x;
+     19            float temp = p1.x * p2.y - p1.y * p2.x;
    \       0x10   0x4641             MOV      R1,R8
    \       0x12   0x0028             MOVS     R0,R5
    \       0x14   0x.... 0x....      BL       __aeabi_fmul
@@ -139,7 +135,7 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
    \       0x24   0x4650             MOV      R0,R10
    \       0x26   0x.... 0x....      BL       __aeabi_fsub
    \       0x2A   0x4682             MOV      R10,R0
-     19            temp += p2.x * p3.y - p2.y * p3.x;
+     20            temp += p2.x * p3.y - p2.y * p3.x;
    \       0x2C   0x0021             MOVS     R1,R4
    \       0x2E   0x0038             MOVS     R0,R7
    \       0x30   0x.... 0x....      BL       __aeabi_fmul
@@ -153,7 +149,7 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
    \       0x46   0x4651             MOV      R1,R10
    \       0x48   0x.... 0x....      BL       __aeabi_fadd
    \       0x4C   0x0004             MOVS     R4,R0
-     20            temp += p3.x * p1.y - p3.y * p1.x;
+     21            temp += p3.x * p1.y - p3.y * p1.x;
    \       0x4E   0x0031             MOVS     R1,R6
    \       0x50   0x4648             MOV      R0,R9
    \       0x52   0x.... 0x....      BL       __aeabi_fmul
@@ -166,39 +162,39 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
    \       0x64   0x.... 0x....      BL       __aeabi_fsub
    \       0x68   0x0021             MOVS     R1,R4
    \       0x6A   0x.... 0x....      BL       __aeabi_fadd
-     21          
-     22            if (temp > CCW_THRESHOLD)
+     22          
+     23            if (temp > CCW_THRESHOLD)
    \       0x6E   0x....             LDR.N    R1,??DataTable3
    \       0x70   0x.... 0x....      BL       __aeabi_cfrcmple
    \       0x74   0xD801             BHI.N    ??getCCW_0
-     23              return 1;
+     24              return 1;
    \       0x76   0x2001             MOVS     R0,#+1
-   \       0x78   0xE006             B.N      ??getCCW_1
-     24            else if (temp < CCW_THRESHOLD)
+   \       0x78   0xE008             B.N      ??getCCW_1
+     25            else if (temp < CCW_THRESHOLD)
    \                     ??getCCW_0: (+1)
-   \       0x7A   0x.... 0x....      BL       __aeabi_cfcmple
-   \       0x7E   0xD202             BCS.N    ??getCCW_2
-     25              return -1;
-   \       0x80   0xF05F 0x30FF      MOVS     R0,#+4294967295
-   \       0x84   0xE000             B.N      ??getCCW_1
-     26          
-     27            return 0;
+   \       0x7A   0xF05F 0x517C      MOVS     R1,#+1056964608
+   \       0x7E   0x.... 0x....      BL       __aeabi_cfcmple
+   \       0x82   0xD202             BCS.N    ??getCCW_2
+     26              return -1;
+   \       0x84   0xF05F 0x30FF      MOVS     R0,#+4294967295
+   \       0x88   0xE000             B.N      ??getCCW_1
+     27          
+     28            return 0;
    \                     ??getCCW_2: (+1)
-   \       0x86   0x2000             MOVS     R0,#+0
+   \       0x8A   0x2000             MOVS     R0,#+0
    \                     ??getCCW_1: (+1)
-   \       0x88   0xE8BD 0x8FF2      POP      {R1,R4-R11,PC}
-     28          }
-     29          
+   \       0x8C   0xE8BD 0x8FF2      POP      {R1,R4-R11,PC}
+     29          }
+     30          
 
    \                                 In section .text, align 2, keep-with-next
-     30          float getDistance(Point p1, Point p2) {
+     31          float getDistance(Point p1, Point p2) { return sqrtf(powf(p1.x - p2.x, 2) + powf(p1.y - p2.y, 2)); }
    \                     getDistance: (+1)
    \        0x0   0xE92D 0x41F0      PUSH     {R4-R8,LR}
    \        0x4   0x0004             MOVS     R4,R0
    \        0x6   0x000D             MOVS     R5,R1
    \        0x8   0x0016             MOVS     R6,R2
    \        0xA   0x001F             MOVS     R7,R3
-     31            return sqrtf(powf(p1.x - p2.x, 2) + powf(p1.y - p2.y, 2));
    \        0xC   0x0020             MOVS     R0,R4
    \        0xE   0x0031             MOVS     R1,R6
    \       0x10   0x.... 0x....      BL       __aeabi_fsub
@@ -218,41 +214,42 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
    \       0x34   0x.... 0x....      BL       __aeabi_fadd
    \       0x38   0x.... 0x....      BL       sqrtf
    \       0x3C   0xE8BD 0x81F0      POP      {R4-R8,PC}
-     32          }
-     33          
+     32          
 
    \                                 In section .text, align 2, keep-with-next
-     34          void initMap(Point *map, int *map_size, int *map_Idx) {
+     33          void initMap(Point *map, int *map_size, int *map_Idx) {
    \                     initMap: (+1)
    \        0x0   0xB430             PUSH     {R4,R5}
-     35            int size = *map_size = 4;
+     34            int size = *map_size = 4;
    \        0x2   0x2304             MOVS     R3,#+4
    \        0x4   0x600B             STR      R3,[R1, #+0]
-     36          
-     37            for (*map_Idx = 0; *map_Idx < size; (*map_Idx)++) {
-   \        0x6   0x2100             MOVS     R1,#+0
-   \        0x8   0x6011             STR      R1,[R2, #+0]
-   \        0xA   0xE00D             B.N      ??initMap_0
-     38              map[*map_Idx] = init_map[*map_Idx];
+     35          
+     36            for (*map_Idx = -1; *map_Idx - 1 < size; ) {
+   \        0x6   0xF05F 0x31FF      MOVS     R1,#+4294967295
+   \        0xA   0x6011             STR      R1,[R2, #+0]
+   \        0xC   0xE00D             B.N      ??initMap_0
+     37              (*map_Idx)++;
    \                     ??initMap_1: (+1)
-   \        0xC   0x....             LDR.N    R1,??DataTable3_1
-   \        0xE   0x6814             LDR      R4,[R2, #+0]
-   \       0x10   0xEB01 0x01C4      ADD      R1,R1,R4, LSL #+3
-   \       0x14   0xE9D1 0x4500      LDRD     R4,R5,[R1, #+0]
-   \       0x18   0x6811             LDR      R1,[R2, #+0]
-   \       0x1A   0xEB00 0x01C1      ADD      R1,R0,R1, LSL #+3
-   \       0x1E   0xE9C1 0x4500      STRD     R4,R5,[R1, #+0]
+   \        0xE   0x6811             LDR      R1,[R2, #+0]
+   \       0x10   0x1C49             ADDS     R1,R1,#+1
+   \       0x12   0x6011             STR      R1,[R2, #+0]
+     38              map[*map_Idx] = init_map[*map_Idx];
+   \       0x14   0x....             LDR.N    R1,??DataTable3_1
+   \       0x16   0x6814             LDR      R4,[R2, #+0]
+   \       0x18   0xEB01 0x01C4      ADD      R1,R1,R4, LSL #+3
+   \       0x1C   0xE9D1 0x4500      LDRD     R4,R5,[R1, #+0]
+   \       0x20   0x6811             LDR      R1,[R2, #+0]
+   \       0x22   0xEB00 0x01C1      ADD      R1,R0,R1, LSL #+3
+   \       0x26   0xE9C1 0x4500      STRD     R4,R5,[R1, #+0]
      39            }
-   \       0x22   0x6811             LDR      R1,[R2, #+0]
-   \       0x24   0x1C49             ADDS     R1,R1,#+1
-   \       0x26   0x6011             STR      R1,[R2, #+0]
    \                     ??initMap_0: (+1)
-   \       0x28   0x6811             LDR      R1,[R2, #+0]
-   \       0x2A   0x4299             CMP      R1,R3
-   \       0x2C   0xDBEE             BLT.N    ??initMap_1
+   \       0x2A   0x6811             LDR      R1,[R2, #+0]
+   \       0x2C   0x1E49             SUBS     R1,R1,#+1
+   \       0x2E   0x4299             CMP      R1,R3
+   \       0x30   0xDBED             BLT.N    ??initMap_1
      40          }
-   \       0x2E   0xBC30             POP      {R4,R5}
-   \       0x30   0x4770             BX       LR
+   \       0x32   0xBC30             POP      {R4,R5}
+   \       0x34   0x4770             BX       LR
      41          
 
    \                                 In section .text, align 2, keep-with-next
@@ -448,14 +445,13 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
      97            for (int i = 2; i < size; i++) {
    \       0x48   0x2602             MOVS     R6,#+2
    \       0x4A   0xE029             B.N      ??assignConvexHull_0
-     98              while (stack_top >= 2 &&
-     99                     getCCW(stack[stack_top - 2], stack[stack_top - 1], map[i]) <= 0) {
-    100                stack_top--;
+     98              while (stack_top >= 2 && getCCW(stack[stack_top - 2], stack[stack_top - 1], map[i]) <= 0) {
+     99                stack_top--;
    \                     ??assignConvexHull_1: (+1)
    \       0x4C   0x6820             LDR      R0,[R4, #+0]
    \       0x4E   0x1E40             SUBS     R0,R0,#+1
    \       0x50   0x6020             STR      R0,[R4, #+0]
-    101              }
+    100              }
    \                     ??assignConvexHull_2: (+1)
    \       0x52   0x6820             LDR      R0,[R4, #+0]
    \       0x54   0x2802             CMP      R0,#+2
@@ -474,7 +470,7 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
    \       0x7E   0x.... 0x....      BL       getCCW
    \       0x82   0x2801             CMP      R0,#+1
    \       0x84   0xDBE2             BLT.N    ??assignConvexHull_1
-    102              stack[stack_top++] = map[i];
+    101              stack[stack_top++] = map[i];
    \                     ??assignConvexHull_3: (+1)
    \       0x86   0xEB07 0x02C6      ADD      R2,R7,R6, LSL #+3
    \       0x8A   0xE9D2 0x0100      LDRD     R0,R1,[R2, #+0]
@@ -484,127 +480,125 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
    \       0x98   0x6820             LDR      R0,[R4, #+0]
    \       0x9A   0x1C40             ADDS     R0,R0,#+1
    \       0x9C   0x6020             STR      R0,[R4, #+0]
-    103            }
+    102            }
    \       0x9E   0x1C76             ADDS     R6,R6,#+1
    \                     ??assignConvexHull_0: (+1)
    \       0xA0   0x454E             CMP      R6,R9
    \       0xA2   0xDBD6             BLT.N    ??assignConvexHull_2
-    104          
-    105            // assign convex hull
-    106            for (int i = 0; i < stack_top; i++) {
+    103          
+    104            // assign convex hull
+    105            for (int i = 0; i < stack_top; i++) {
    \       0xA4   0x2200             MOVS     R2,#+0
    \       0xA6   0xE008             B.N      ??assignConvexHull_4
-    107              map[i] = stack[i];
+    106              map[i] = stack[i];
    \                     ??assignConvexHull_5: (+1)
    \       0xA8   0xEB05 0x03C2      ADD      R3,R5,R2, LSL #+3
    \       0xAC   0xE9D3 0x0100      LDRD     R0,R1,[R3, #+0]
    \       0xB0   0xEB07 0x03C2      ADD      R3,R7,R2, LSL #+3
    \       0xB4   0xE9C3 0x0100      STRD     R0,R1,[R3, #+0]
-    108            }
+    107            }
    \       0xB8   0x1C52             ADDS     R2,R2,#+1
    \                     ??assignConvexHull_4: (+1)
    \       0xBA   0x6820             LDR      R0,[R4, #+0]
    \       0xBC   0x4282             CMP      R2,R0
    \       0xBE   0xDBF3             BLT.N    ??assignConvexHull_5
-    109          
-    110            *map_size = stack_top;
+    108          
+    109            *map_size = stack_top;
    \       0xC0   0x6820             LDR      R0,[R4, #+0]
    \       0xC2   0xF8C8 0x0000      STR      R0,[R8, #+0]
-    111          
-    112            stack_top = 0;
+    110          
+    111            stack_top = 0;
    \       0xC6   0x2000             MOVS     R0,#+0
    \       0xC8   0x6020             STR      R0,[R4, #+0]
-    113          }
+    112          }
    \       0xCA   0xE8BD 0x83F7      POP      {R0-R2,R4-R9,PC}
-    114          
+    113          
 
    \                                 In section .text, align 2, keep-with-next
-    115          void calcAndStoreMidPoints(Point *map_Source, Point *map_Target,
-    116                                     const int *map_SourceSize, int *map_TargetSize) {
+    114          void calcAndStoreMidPoints(Point *map_Source, Point *map_Target, const int *map_SourceSize, int *map_TargetSize) {
    \                     calcAndStoreMidPoints: (+1)
    \        0x0   0xE92D 0x4FF8      PUSH     {R3-R11,LR}
    \        0x4   0x0007             MOVS     R7,R0
    \        0x6   0x468B             MOV      R11,R1
    \        0x8   0x469A             MOV      R10,R3
-    117            int size = *map_SourceSize;
-   \        0xA   0x6815             LDR      R5,[R2, #+0]
-    118            int targetIndex = 0;
-   \        0xC   0x2400             MOVS     R4,#+0
-    119          
-    120            for (int i = 0; i < size; i++) {
-   \        0xE   0x2600             MOVS     R6,#+0
-   \       0x10   0xE042             B.N      ??calcAndStoreMidPoints_0
-    121              Point midPoint;
-    122              midPoint.x =
-    123                  (map_Source[(i - 1 + size) % size].x + map_Source[(i + 1) % size].x) /
-    124                  2;
+    115            int size = *map_SourceSize;
+   \        0xA   0x6814             LDR      R4,[R2, #+0]
+    116            int targetIndex = -1;
+   \        0xC   0xF05F 0x35FF      MOVS     R5,#+4294967295
+    117          
+    118            for (int i = 0; i < size; i++) {
+   \       0x10   0x2600             MOVS     R6,#+0
+   \       0x12   0xE043             B.N      ??calcAndStoreMidPoints_0
+    119              Point midPoint;
+    120              midPoint.x = (map_Source[(i - 1 + size) % size].x + map_Source[(i + 1) % size].x) / 2;
    \                     ??calcAndStoreMidPoints_1: (+1)
-   \       0x12   0x19A8             ADDS     R0,R5,R6
-   \       0x14   0x1E40             SUBS     R0,R0,#+1
-   \       0x16   0x1C72             ADDS     R2,R6,#+1
-   \       0x18   0xFB90 0xF1F5      SDIV     R1,R0,R5
-   \       0x1C   0xFB05 0x0011      MLS      R0,R5,R1,R0
-   \       0x20   0xF857 0x1030      LDR      R1,[R7, R0, LSL #+3]
-   \       0x24   0xFB92 0xF0F5      SDIV     R0,R2,R5
-   \       0x28   0xFB05 0x2210      MLS      R2,R5,R0,R2
-   \       0x2C   0xF857 0x0032      LDR      R0,[R7, R2, LSL #+3]
-   \       0x30   0x.... 0x....      BL       __aeabi_fadd
-   \       0x34   0xF05F 0x4180      MOVS     R1,#+1073741824
-   \       0x38   0x.... 0x....      BL       __aeabi_fdiv
-   \       0x3C   0x4680             MOV      R8,R0
-    125              midPoint.y =
-    126                  (map_Source[(i - 1 + size) % size].y + map_Source[(i + 1) % size].y) /
-    127                  2;
-   \       0x3E   0x19A8             ADDS     R0,R5,R6
-   \       0x40   0x1E40             SUBS     R0,R0,#+1
-   \       0x42   0x1C71             ADDS     R1,R6,#+1
-   \       0x44   0xFB90 0xF2F5      SDIV     R2,R0,R5
-   \       0x48   0xFB05 0x0012      MLS      R0,R5,R2,R0
-   \       0x4C   0xEB07 0x00C0      ADD      R0,R7,R0, LSL #+3
-   \       0x50   0x6840             LDR      R0,[R0, #+4]
-   \       0x52   0xFB91 0xF2F5      SDIV     R2,R1,R5
-   \       0x56   0xFB05 0x1112      MLS      R1,R5,R2,R1
-   \       0x5A   0xEB07 0x01C1      ADD      R1,R7,R1, LSL #+3
-   \       0x5E   0x6849             LDR      R1,[R1, #+4]
-   \       0x60   0x.... 0x....      BL       __aeabi_fadd
-   \       0x64   0xF05F 0x4180      MOVS     R1,#+1073741824
-   \       0x68   0x.... 0x....      BL       __aeabi_fdiv
-   \       0x6C   0x4681             MOV      R9,R0
-    128          
-    129              if (targetIndex == 0 ||
-    130                  getDistance(midPoint, map_Target[targetIndex - 1]) > THRESHOLD) {
-   \       0x6E   0x2C00             CMP      R4,#+0
-   \       0x70   0xD00C             BEQ.N    ??calcAndStoreMidPoints_2
-   \       0x72   0xEB0B 0x00C4      ADD      R0,R11,R4, LSL #+3
-   \       0x76   0x3808             SUBS     R0,R0,#+8
-   \       0x78   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
-   \       0x7C   0x4640             MOV      R0,R8
-   \       0x7E   0x4649             MOV      R1,R9
-   \       0x80   0x.... 0x....      BL       getDistance
-   \       0x84   0x....             LDR.N    R1,??DataTable3
-   \       0x86   0x.... 0x....      BL       __aeabi_cfrcmple
-   \       0x8A   0xD804             BHI.N    ??calcAndStoreMidPoints_3
-    131                map_Target[targetIndex++] = midPoint;
+   \       0x14   0x19A0             ADDS     R0,R4,R6
+   \       0x16   0x1E40             SUBS     R0,R0,#+1
+   \       0x18   0x1C72             ADDS     R2,R6,#+1
+   \       0x1A   0xFB90 0xF1F4      SDIV     R1,R0,R4
+   \       0x1E   0xFB04 0x0011      MLS      R0,R4,R1,R0
+   \       0x22   0xF857 0x1030      LDR      R1,[R7, R0, LSL #+3]
+   \       0x26   0xFB92 0xF0F4      SDIV     R0,R2,R4
+   \       0x2A   0xFB04 0x2210      MLS      R2,R4,R0,R2
+   \       0x2E   0xF857 0x0032      LDR      R0,[R7, R2, LSL #+3]
+   \       0x32   0x.... 0x....      BL       __aeabi_fadd
+   \       0x36   0xF05F 0x4180      MOVS     R1,#+1073741824
+   \       0x3A   0x.... 0x....      BL       __aeabi_fdiv
+   \       0x3E   0x4680             MOV      R8,R0
+    121              midPoint.y = (map_Source[(i - 1 + size) % size].y + map_Source[(i + 1) % size].y) / 2;
+   \       0x40   0x19A0             ADDS     R0,R4,R6
+   \       0x42   0x1E40             SUBS     R0,R0,#+1
+   \       0x44   0x1C71             ADDS     R1,R6,#+1
+   \       0x46   0xFB90 0xF2F4      SDIV     R2,R0,R4
+   \       0x4A   0xFB04 0x0012      MLS      R0,R4,R2,R0
+   \       0x4E   0xEB07 0x00C0      ADD      R0,R7,R0, LSL #+3
+   \       0x52   0x6840             LDR      R0,[R0, #+4]
+   \       0x54   0xFB91 0xF2F4      SDIV     R2,R1,R4
+   \       0x58   0xFB04 0x1112      MLS      R1,R4,R2,R1
+   \       0x5C   0xEB07 0x01C1      ADD      R1,R7,R1, LSL #+3
+   \       0x60   0x6849             LDR      R1,[R1, #+4]
+   \       0x62   0x.... 0x....      BL       __aeabi_fadd
+   \       0x66   0xF05F 0x4180      MOVS     R1,#+1073741824
+   \       0x6A   0x.... 0x....      BL       __aeabi_fdiv
+   \       0x6E   0x4681             MOV      R9,R0
+    122          
+    123              if (targetIndex == -1 || getDistance(midPoint, map_Target[targetIndex - 1]) > THRESHOLD) {
+   \       0x70   0xF115 0x0F01      CMN      R5,#+1
+   \       0x74   0xD00C             BEQ.N    ??calcAndStoreMidPoints_2
+   \       0x76   0xEB0B 0x00C5      ADD      R0,R11,R5, LSL #+3
+   \       0x7A   0x3808             SUBS     R0,R0,#+8
+   \       0x7C   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x80   0x4640             MOV      R0,R8
+   \       0x82   0x4649             MOV      R1,R9
+   \       0x84   0x.... 0x....      BL       getDistance
+   \       0x88   0x....             LDR.N    R1,??DataTable3_4
+   \       0x8A   0x.... 0x....      BL       __aeabi_cfrcmple
+   \       0x8E   0xD804             BHI.N    ??calcAndStoreMidPoints_3
+    124                map_Target[++targetIndex] = midPoint;
    \                     ??calcAndStoreMidPoints_2: (+1)
-   \       0x8C   0xEB0B 0x00C4      ADD      R0,R11,R4, LSL #+3
-   \       0x90   0xE9C0 0x8900      STRD     R8,R9,[R0, #+0]
-   \       0x94   0x1C64             ADDS     R4,R4,#+1
-    132              }
-    133            }
+   \       0x90   0x1C6D             ADDS     R5,R5,#+1
+   \       0x92   0xEB0B 0x00C5      ADD      R0,R11,R5, LSL #+3
+   \       0x96   0xE9C0 0x8900      STRD     R8,R9,[R0, #+0]
+    125              }
+    126            }
    \                     ??calcAndStoreMidPoints_3: (+1)
-   \       0x96   0x1C76             ADDS     R6,R6,#+1
+   \       0x9A   0x1C76             ADDS     R6,R6,#+1
    \                     ??calcAndStoreMidPoints_0: (+1)
-   \       0x98   0x42AE             CMP      R6,R5
-   \       0x9A   0xDBBA             BLT.N    ??calcAndStoreMidPoints_1
-    134          
-    135            *map_TargetSize = targetIndex;
-   \       0x9C   0xF8CA 0x4000      STR      R4,[R10, #+0]
-    136          }
-   \       0xA0   0xE8BD 0x8FF1      POP      {R0,R4-R11,PC}
+   \       0x9C   0x42A6             CMP      R6,R4
+   \       0x9E   0xDBB9             BLT.N    ??calcAndStoreMidPoints_1
+    127          
+    128            target_Map_Idx = targetIndex;
+   \       0xA0   0x....             LDR.N    R0,??DataTable3_5
+   \       0xA2   0x6005             STR      R5,[R0, #+0]
+    129            *map_TargetSize = targetIndex + 1;
+   \       0xA4   0x1C6D             ADDS     R5,R5,#+1
+   \       0xA6   0xF8CA 0x5000      STR      R5,[R10, #+0]
+    130          }
+   \       0xAA   0xE8BD 0x8FF1      POP      {R0,R4-R11,PC}
 
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable3:
-   \        0x0   0x3DCC'CCCD        DC32     0x3dcccccd
+   \        0x0   0x3F00'0001        DC32     0x3f000001
 
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable3_1:
@@ -617,7 +611,14 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
    \                                 In section .text, align 4, keep-with-next
    \                     ??DataTable3_3:
    \        0x0   0x....'....        DC32     stack
-    137          
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_4:
+   \        0x0   0x3F80'0001        DC32     0x3f800001
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_5:
+   \        0x0   0x....'....        DC32     target_Map_Idx
 
    Maximum stack usage in bytes:
 
@@ -660,11 +661,13 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
        4  ??DataTable3_1
        4  ??DataTable3_2
        4  ??DataTable3_3
+       4  ??DataTable3_4
+       4  ??DataTable3_5
      206  assignConvexHull
-     164  calcAndStoreMidPoints
-     140  getCCW
+     174  calcAndStoreMidPoints
+     144  getCCW
       64  getDistance
-      50  initMap
+      54  initMap
       32  init_map
       74  sortMap
       92  sortMapByCCW
@@ -681,9 +684,9 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
  
  2'420 bytes in section .bss
     32 bytes in section .rodata
-   880 bytes in section .text
+   906 bytes in section .text
  
-   880 bytes of CODE  memory
+   906 bytes of CODE  memory
     32 bytes of CONST memory
  2'420 bytes of DATA  memory
 

@@ -96,8 +96,8 @@ void TIM2_IRQHandler(void)
 
 void delay()
 {
-    int i;
-    for(i = 0; i < 10000000; i++);
+    uint32_t i;
+    for(i = 0; i < 1000000; i++);
 }
 
 int main(void)

@@ -6,8 +6,8 @@
 #define X_MAX 1000.0
 #define Y_MAX 1000.0
 
-#define THRESHOLD 0.1  // float로 정의된 Point 간 비교를 위한 임계값
-#define CCW_THRESHOLD 0.1
+#define THRESHOLD 1.0  // float로 정의된 Point 간 비교를 위한 임계값
+#define CCW_THRESHOLD 0.5  // CCW 계산을 위한 임계값
 
 struct Point {
   float x;

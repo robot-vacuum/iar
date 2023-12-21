@@ -5,6 +5,9 @@
 #include "configuration.h"
 #include "map.h"
 
+extern int isFroward;
+extern int isRotate;
+
 extern void LEFT_MOTOR_FORWARD(void);
 extern void LEFT_MOTOR_BACKWARD(void);
 extern void LEFT_MOTOR_STOP(void);

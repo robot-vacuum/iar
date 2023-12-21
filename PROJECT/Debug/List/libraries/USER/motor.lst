@@ -1,49 +1,44 @@
 ###############################################################################
 #
-# IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM         21/Dec/2023  22:48:25
+# IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM         22/Dec/2023  05:46:08
 # Copyright 1999-2022 IAR Systems AB.
 #
 #    Cpu mode          =  thumb
 #    Endian            =  little
 #    Source file       =
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\USER\motor.c
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\USER\motor.c
 #    Command line      =
 #        -f
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\libraries\USER\motor.o.rsp
-#        (C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\USER\motor.c
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\libraries\USER\motor.o.rsp
+#        (c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\USER\motor.c
 #        -D USE_STDPERIPH_DRIVER -D STM32F10X_CL -lC
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\List\libraries\USER
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\List\libraries\USER
 #        -o
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\libraries\USER
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\libraries\USER
 #        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
 #        --no_clustering --no_scheduling --debug --endian=little
 #        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files\IAR
 #        Systems\Embedded Workbench 9.1\arm\inc\c\DLib_Config_Normal.h" -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\CMSIS\DeviceSupport\
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\CMSIS\DeviceSupport\
 #        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\CMSIS\DeviceSupport\Startup\
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\CMSIS\DeviceSupport\Startup\
 #        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\
 #        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\src\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\LCD\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\user\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\user\inc\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\
-#        -I
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\USER\
-#        -Ol -I "C:\Program Files\IAR Systems\Embedded Workbench
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\src\
+#        -I c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\LCD\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\user\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\user\inc\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\ -I
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\USER\ -Ol -I
+#        "C:\Program Files\IAR Systems\Embedded Workbench
 #        9.1\arm\CMSIS\Core\Include\\") --dependencies=n
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\libraries\USER\motor.o.d
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\libraries\USER\motor.o.d
 #    Locale            =  C
 #    List file         =
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\List\libraries\USER\motor.lst
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\List\libraries\USER\motor.lst
 #    Object file       =
-#        C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\Debug\Obj\libraries\USER\motor.o
+#        c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\Debug\Obj\libraries\USER\motor.o
 #    Runtime model:       
 #      __CPP_Runtime   =  1
 #      __SystemLibrary =  DLib
@@ -51,15 +46,27 @@
 #
 ###############################################################################
 
-C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13ad1e43a4a22\PROJECT\libraries\USER\motor.c
+c:\Users\hyuunnnn\Documents\GitHub\iar\PROJECT\libraries\USER\motor.c
       1          #include "motor.h"
-      2          #include "definitions.h"
-      3          
+      2          
+      3          #include "definitions.h"
+      4          
+
+   \                                 In section .bss, align 4
+      5          int isFroward = 0;
+   \                     isFroward:
+   \        0x0                      DS8 4
+
+   \                                 In section .bss, align 4
+      6          int isRotate = 0;
+   \                     isRotate:
+   \        0x0                      DS8 4
+      7          
 
    \                                 In section .text, align 2, keep-with-next
-      4          void delay() {
-      5            int i;
-      6            for (i = 0; i < 10000; i++)
+      8          void delay() {
+      9            int i;
+     10            for (i = 0; i < 10000; i++)
    \                     delay: (+1)
    \        0x0   0x2000             MOVS     R0,#+0
    \        0x2   0xE000             B.N      ??delay_0
@@ -69,233 +76,222 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
    \        0x6   0xF242 0x7110      MOVW     R1,#+10000
    \        0xA   0x4288             CMP      R0,R1
    \        0xC   0xDBFA             BLT.N    ??delay_1
-      7              ;
-      8          }
+     11              ;
+     12          }
    \        0xE   0x4770             BX       LR
-      9          
+     13          
 
    \                                 In section .text, align 2, keep-with-next
-     10          void LEFT_MOTOR_FORWARD(void) {
+     14          void LEFT_MOTOR_FORWARD(void) {
    \                     LEFT_MOTOR_FORWARD: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
-     11            GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
-   \        0x2   0x....             LDR.N    R4,??DataTable9
+     15            GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
+   \        0x2   0x....             LDR.N    R4,??DataTable7
    \        0x4   0x2104             MOVS     R1,#+4
    \        0x6   0x0020             MOVS     R0,R4
    \        0x8   0x.... 0x....      BL       GPIO_ResetBits
-     12            GPIO_SetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
+     16            GPIO_SetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
    \        0xC   0x2108             MOVS     R1,#+8
    \        0xE   0x0020             MOVS     R0,R4
    \       0x10   0x.... 0x....      BL       GPIO_SetBits
-     13          }
+     17          }
    \       0x14   0xBD10             POP      {R4,PC}
-     14          
+     18          
 
    \                                 In section .text, align 2, keep-with-next
-     15          void LEFT_MOTOR_BACKWARD(void) {
+     19          void LEFT_MOTOR_BACKWARD(void) {
    \                     LEFT_MOTOR_BACKWARD: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
-     16            GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
-   \        0x2   0x....             LDR.N    R4,??DataTable9
+     20            GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
+   \        0x2   0x....             LDR.N    R4,??DataTable7
    \        0x4   0x2108             MOVS     R1,#+8
    \        0x6   0x0020             MOVS     R0,R4
    \        0x8   0x.... 0x....      BL       GPIO_ResetBits
-     17            GPIO_SetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
+     21            GPIO_SetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
    \        0xC   0x2104             MOVS     R1,#+4
    \        0xE   0x0020             MOVS     R0,R4
    \       0x10   0x.... 0x....      BL       GPIO_SetBits
-     18          }
+     22          }
    \       0x14   0xBD10             POP      {R4,PC}
-     19          
+     23          
 
    \                                 In section .text, align 2, keep-with-next
-     20          void LEFT_MOTOR_STOP(void) {
+     24          void LEFT_MOTOR_STOP(void) {
    \                     LEFT_MOTOR_STOP: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
-     21            GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
-   \        0x2   0x....             LDR.N    R4,??DataTable9
+     25            GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
+   \        0x2   0x....             LDR.N    R4,??DataTable7
    \        0x4   0x2104             MOVS     R1,#+4
    \        0x6   0x0020             MOVS     R0,R4
    \        0x8   0x.... 0x....      BL       GPIO_ResetBits
-     22            GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
+     26            GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
    \        0xC   0x2108             MOVS     R1,#+8
    \        0xE   0x0020             MOVS     R0,R4
    \       0x10   0x.... 0x....      BL       GPIO_ResetBits
-     23          }
+     27          }
    \       0x14   0xBD10             POP      {R4,PC}
-     24          
+     28          
 
    \                                 In section .text, align 2, keep-with-next
-     25          void RIGHT_MOTOR_FORWARD(void) {
+     29          void RIGHT_MOTOR_FORWARD(void) {
    \                     RIGHT_MOTOR_FORWARD: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
-     26            GPIO_SetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
-   \        0x2   0x....             LDR.N    R4,??DataTable9
+     30            GPIO_SetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
+   \        0x2   0x....             LDR.N    R4,??DataTable7
    \        0x4   0x2110             MOVS     R1,#+16
    \        0x6   0x0020             MOVS     R0,R4
    \        0x8   0x.... 0x....      BL       GPIO_SetBits
-     27            GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);
+     31            GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);
    \        0xC   0x2120             MOVS     R1,#+32
    \        0xE   0x0020             MOVS     R0,R4
    \       0x10   0x.... 0x....      BL       GPIO_ResetBits
-     28          }
+     32          }
    \       0x14   0xBD10             POP      {R4,PC}
-     29          
+     33          
 
    \                                 In section .text, align 2, keep-with-next
-     30          void RIGHT_MOTOR_BACKWARD(void) {
+     34          void RIGHT_MOTOR_BACKWARD(void) {
    \                     RIGHT_MOTOR_BACKWARD: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
-     31            GPIO_SetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);
-   \        0x2   0x....             LDR.N    R4,??DataTable9
+     35            GPIO_SetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);
+   \        0x2   0x....             LDR.N    R4,??DataTable7
    \        0x4   0x2120             MOVS     R1,#+32
    \        0x6   0x0020             MOVS     R0,R4
    \        0x8   0x.... 0x....      BL       GPIO_SetBits
-     32            GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
+     36            GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
    \        0xC   0x2110             MOVS     R1,#+16
    \        0xE   0x0020             MOVS     R0,R4
    \       0x10   0x.... 0x....      BL       GPIO_ResetBits
-     33          }
+     37          }
    \       0x14   0xBD10             POP      {R4,PC}
-     34          
+     38          
 
    \                                 In section .text, align 2, keep-with-next
-     35          void RIGHT_MOTOR_STOP(void) {
+     39          void RIGHT_MOTOR_STOP(void) {
    \                     RIGHT_MOTOR_STOP: (+1)
    \        0x0   0xB510             PUSH     {R4,LR}
-     36            GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
-   \        0x2   0x....             LDR.N    R4,??DataTable9
+     40            GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
+   \        0x2   0x....             LDR.N    R4,??DataTable7
    \        0x4   0x2110             MOVS     R1,#+16
    \        0x6   0x0020             MOVS     R0,R4
    \        0x8   0x.... 0x....      BL       GPIO_ResetBits
-     37            GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);
+     41            GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);
    \        0xC   0x2120             MOVS     R1,#+32
    \        0xE   0x0020             MOVS     R0,R4
    \       0x10   0x.... 0x....      BL       GPIO_ResetBits
-     38          }
+     42          }
    \       0x14   0xBD10             POP      {R4,PC}
-     39          
+     43          
 
    \                                 In section .text, align 2, keep-with-next
-     40          void FORWARD(void) {
+     44          void FORWARD(void) {
    \                     FORWARD: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-     41            LEFT_MOTOR_FORWARD();
+     45            LEFT_MOTOR_FORWARD();
    \        0x2   0x.... 0x....      BL       LEFT_MOTOR_FORWARD
-     42            RIGHT_MOTOR_FORWARD();
+     46            RIGHT_MOTOR_FORWARD();
    \        0x6   0x.... 0x....      BL       RIGHT_MOTOR_FORWARD
-     43          }
+     47          }
    \        0xA   0xBD01             POP      {R0,PC}
-     44          
+     48          
 
    \                                 In section .text, align 2, keep-with-next
-     45          void BACKWARD(void) {
+     49          void BACKWARD(void) {
    \                     BACKWARD: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-     46            LEFT_MOTOR_BACKWARD();
+     50            LEFT_MOTOR_BACKWARD();
    \        0x2   0x.... 0x....      BL       LEFT_MOTOR_BACKWARD
-     47            RIGHT_MOTOR_BACKWARD();
+     51            RIGHT_MOTOR_BACKWARD();
    \        0x6   0x.... 0x....      BL       RIGHT_MOTOR_BACKWARD
-     48          }
+     52          }
    \        0xA   0xBD01             POP      {R0,PC}
-     49          
+     53          
 
    \                                 In section .text, align 2, keep-with-next
-     50          void STOP(void) {
+     54          void STOP(void) {
    \                     STOP: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-     51            LEFT_MOTOR_STOP();
+     55            LEFT_MOTOR_STOP();
    \        0x2   0x.... 0x....      BL       LEFT_MOTOR_STOP
-     52            RIGHT_MOTOR_STOP();
+     56            RIGHT_MOTOR_STOP();
    \        0x6   0x.... 0x....      BL       RIGHT_MOTOR_STOP
-     53          }
+     57          }
    \        0xA   0xBD01             POP      {R0,PC}
-     54          
+     58          
 
    \                                 In section .text, align 2, keep-with-next
-     55          void CLOCKWISE_ROTATION(void) {
+     59          void CLOCKWISE_ROTATION(void) {
    \                     CLOCKWISE_ROTATION: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-     56            LEFT_MOTOR_BACKWARD();
+     60            LEFT_MOTOR_BACKWARD();
    \        0x2   0x.... 0x....      BL       LEFT_MOTOR_BACKWARD
-     57            RIGHT_MOTOR_FORWARD();
+     61            RIGHT_MOTOR_FORWARD();
    \        0x6   0x.... 0x....      BL       RIGHT_MOTOR_FORWARD
-     58          }
+     62          }
    \        0xA   0xBD01             POP      {R0,PC}
-     59          
+     63          
 
    \                                 In section .text, align 2, keep-with-next
-     60          void COUNTER_CLOCKWISE_ROTATION(void) {
+     64          void COUNTER_CLOCKWISE_ROTATION(void) {
    \                     COUNTER_CLOCKWISE_ROTATION: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-     61            LEFT_MOTOR_FORWARD();
+     65            LEFT_MOTOR_FORWARD();
    \        0x2   0x.... 0x....      BL       LEFT_MOTOR_FORWARD
-     62            RIGHT_MOTOR_BACKWARD();
+     66            RIGHT_MOTOR_BACKWARD();
    \        0x6   0x.... 0x....      BL       RIGHT_MOTOR_BACKWARD
-     63          }
+     67          }
    \        0xA   0xBD01             POP      {R0,PC}
-     64          
+     68          
 
    \                                 In section .text, align 2, keep-with-next
-     65          void ONE_TICK_FORWARD(void) {
+     69          void ONE_TICK_FORWARD(void) {
    \                     ONE_TICK_FORWARD: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-     66            TIM_SetCounter(TIM4, ONE_TICK);
-   \        0x2   0xF648 0x41A0      MOVW     R1,#+36000
-   \        0x6   0x....             LDR.N    R0,??DataTable9_1
+     70            TIM_SetCounter(TIM4, ONE_TICK);
+   \        0x2   0xF242 0x41EA      MOVW     R1,#+9450
+   \        0x6   0x....             LDR.N    R0,??DataTable7_1
    \        0x8   0x.... 0x....      BL       TIM_SetCounter
-     67            FORWARD();
+     71            FORWARD();
    \        0xC   0x.... 0x....      BL       FORWARD
-     68          }
+     72          }
    \       0x10   0xBD01             POP      {R0,PC}
-     69          
+     73          
 
    \                                 In section .text, align 2, keep-with-next
-     70          void ONE_TICK_CLOCKWISE_ROTATION(void) {
+     74          void ONE_TICK_CLOCKWISE_ROTATION(void) {
    \                     ONE_TICK_CLOCKWISE_ROTATION: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-     71            TIM_SetCounter(TIM2, ONE_TICK);
-   \        0x2   0xF648 0x41A0      MOVW     R1,#+36000
+     75            
+     76            TIM_SetCounter(TIM2, ONE_TICK);
+   \        0x2   0xF242 0x41EA      MOVW     R1,#+9450
    \        0x6   0xF05F 0x4080      MOVS     R0,#+1073741824
    \        0xA   0x.... 0x....      BL       TIM_SetCounter
-     72            isClockWise = 1;
-   \        0xE   0x2001             MOVS     R0,#+1
-   \       0x10   0x....             LDR.N    R1,??DataTable9_2
-   \       0x12   0x6008             STR      R0,[R1, #+0]
-     73            CLOCKWISE_ROTATION();
-   \       0x14   0x.... 0x....      BL       CLOCKWISE_ROTATION
-     74          }
-   \       0x18   0xBD01             POP      {R0,PC}
-     75          
+     77            CLOCKWISE_ROTATION();
+   \        0xE   0x.... 0x....      BL       CLOCKWISE_ROTATION
+     78          }
+   \       0x12   0xBD01             POP      {R0,PC}
+     79          
 
    \                                 In section .text, align 2, keep-with-next
-     76          void ONE_TICK_COUNTER_CLOCKWISE_ROTATION(void) {
+     80          void ONE_TICK_COUNTER_CLOCKWISE_ROTATION(void) {
    \                     ONE_TICK_COUNTER_CLOCKWISE_ROTATION: (+1)
    \        0x0   0xB580             PUSH     {R7,LR}
-     77            TIM_SetCounter(TIM2, ONE_TICK);
-   \        0x2   0xF648 0x41A0      MOVW     R1,#+36000
+     81            TIM_SetCounter(TIM2, ONE_TICK);
+   \        0x2   0xF242 0x41EA      MOVW     R1,#+9450
    \        0x6   0xF05F 0x4080      MOVS     R0,#+1073741824
    \        0xA   0x.... 0x....      BL       TIM_SetCounter
-     78            isClockWise = 0;
-   \        0xE   0x2000             MOVS     R0,#+0
-   \       0x10   0x....             LDR.N    R1,??DataTable9_2
-   \       0x12   0x6008             STR      R0,[R1, #+0]
-     79            COUNTER_CLOCKWISE_ROTATION();
-   \       0x14   0x.... 0x....      BL       COUNTER_CLOCKWISE_ROTATION
-     80          }
-   \       0x18   0xBD01             POP      {R0,PC}
+     82            COUNTER_CLOCKWISE_ROTATION();
+   \        0xE   0x.... 0x....      BL       COUNTER_CLOCKWISE_ROTATION
+     83          }
+   \       0x12   0xBD01             POP      {R0,PC}
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable9:
+   \                     ??DataTable7:
    \        0x0   0x4001'1800        DC32     0x40011800
 
    \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable9_1:
+   \                     ??DataTable7_1:
    \        0x0   0x4000'0800        DC32     0x40000800
-
-   \                                 In section .text, align 4, keep-with-next
-   \                     ??DataTable9_2:
-   \        0x0   0x....'....        DC32     isClockWise
 
    Maximum stack usage in bytes:
 
@@ -348,9 +344,8 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
 
    Bytes  Function/Label
    -----  --------------
-       4  ??DataTable9
-       4  ??DataTable9_1
-       4  ??DataTable9_2
+       4  ??DataTable7
+       4  ??DataTable7_1
       12  BACKWARD
       12  CLOCKWISE_ROTATION
       12  COUNTER_CLOCKWISE_ROTATION
@@ -358,19 +353,23 @@ C:\Users\hyuunnnn\Desktop\temptemp\testing-ground-cda8245e2e235e810093876e6cf13a
       22  LEFT_MOTOR_BACKWARD
       22  LEFT_MOTOR_FORWARD
       22  LEFT_MOTOR_STOP
-      26  ONE_TICK_CLOCKWISE_ROTATION
-      26  ONE_TICK_COUNTER_CLOCKWISE_ROTATION
+      20  ONE_TICK_CLOCKWISE_ROTATION
+      20  ONE_TICK_COUNTER_CLOCKWISE_ROTATION
       18  ONE_TICK_FORWARD
       22  RIGHT_MOTOR_BACKWARD
       22  RIGHT_MOTOR_FORWARD
       22  RIGHT_MOTOR_STOP
       12  STOP
       16  delay
+       4  isFroward
+       4  isRotate
 
  
- 290 bytes in section .text
+   8 bytes in section .bss
+ 274 bytes in section .text
  
- 290 bytes of CODE memory
+ 274 bytes of CODE memory
+   8 bytes of DATA memory
 
 Errors: none
 Warnings: none

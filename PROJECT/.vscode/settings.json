@@ -1,0 +1,6 @@
+{
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, ColumnLimit: 120 }",
+  "files.associations": {
+    "core_cm3.h": "c"
+  }
+}

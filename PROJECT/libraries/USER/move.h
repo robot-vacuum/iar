@@ -3,12 +3,9 @@
 
 #include "map.h"
 #include "motor.h"
+#include "configuration.h"
 
-#define FORWARD_TICK 1.0
-#define ROTATE_TICK 1.0
-
-
-#define FORWARD_TICK 1.0
+#define FORWARD_TICK 100.0
 #define ROTATE_TICK 1.0
 
 extern int global_Theta;
@@ -23,4 +20,4 @@ extern int getTheta(Point p0, Point p1, Point p2);
 extern void moveForwardToNextPoint();
 
 extern void generalMove();
-#endif //MOVE_H
+#endif  // MOVE_H
