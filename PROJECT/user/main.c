@@ -17,6 +17,7 @@
 #include "touch.h"
 
 
+// 블루투스 master host 에게 target map의 좌표를 전송하는 함수
 void sendTargetMap() {
   char words[100];
   int size = 0;
@@ -34,6 +35,7 @@ void sendTargetMap() {
   }
 }
 
+// 비동기 방식의 USART 동기화를 위한 명시적 delay
 void USARTDelay() {
   uint32_t i;
   for (i = 0; i < 1000000; i++)
@@ -42,6 +44,7 @@ void USARTDelay() {
 
 void circulateTargetMap() { generalMove(); }
 
+// inetger를 string으로 변환해주는 함수
 void integerToString(char *words, uint32_t num, int *size)
 {
   int i = 0;
@@ -57,11 +60,13 @@ void integerToString(char *words, uint32_t num, int *size)
   *size = i;
 }
 
+// targetMap update 함수
 void updateTargetMap() {
   assignConvexHull(source_Map, &source_Map_size);
   calcAndStoreMidPoints(source_Map, target_Map, &source_Map_size, &target_Map_size);
 }
 
+// 블루투스를 통해 string을 전송하는 함수
 void sendWords(char *words, int size)
 {
   for(int i = 0; i < size; ++i) {
@@ -72,6 +77,7 @@ void sendWords(char *words, int size)
   USARTDelay();    
 }
 
+// 현재 위치를 USART를 통해 전송하는 함수
 void sendCurrentPoint(Point current_Point)
 {
   char words[100];
