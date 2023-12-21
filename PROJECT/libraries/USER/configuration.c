@@ -6,31 +6,31 @@ int isInturrupted = 0;
 int isClockWise = 0;
 
 uint16_t Right_Interrupt_Status;
-
 EXTI_InitTypeDef EXTI_InitStructure;
-
 TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
 TIM_OCInitTypeDef TIM_OCInitStructure;
 
+// 전진 및 회전에 사용되는 상수
 int dir[4][2] = {{FORWARD_TICK, 0}, {0, FORWARD_TICK}, {-FORWARD_TICK, 0}, {0, -FORWARD_TICK}};
 int dir_Idx = 0;
 
 Point inner_Map[100];
 int inner_Map_Idx = 0;
 
-
+// ADC (아날로그-디지털 변환기)를 구성하는 함수
 void Right_Interrupt_Enable(void) {
   Right_Interrupt_Status = 1;
   EXTI_InitStructure.EXTI_LineCmd = ENABLE;
   EXTI_Init(&EXTI_InitStructure);
 }
-
+// ADC (아날로그-디지털 변환기)를 구성하는 함수
 void Right_Interrupt_Disable(void) {
   Right_Interrupt_Status = 0;
   EXTI_InitStructure.EXTI_LineCmd = DISABLE;
   EXTI_Init(&EXTI_InitStructure);
 }
 
+// ADC (아날로그-디지털 변환기)를 구성하는 함수
 void EXTI_Cmd(uint32_t EXTI_Line, FunctionalState command) {
   EXTI_InitStructure.EXTI_Line = EXTI_Line;
   EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
@@ -39,6 +39,7 @@ void EXTI_Cmd(uint32_t EXTI_Line, FunctionalState command) {
   EXTI_Init(&EXTI_InitStructure);
 }
 
+// ADC (아날로그-디지털 변환기)를 구성하는 함수
 void RCC_Configuration(void) {
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
@@ -54,6 +55,7 @@ void RCC_Configuration(void) {
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
 }
 
+// GPIO (일반 입력/출력)를 구성하는 함수
 void GPIO_Configuration(void) {
   GPIO_InitTypeDef GPIO_InitStructure;
   /* motor driver setting */
@@ -125,6 +127,7 @@ void GPIO_Configuration(void) {
   GPIO_Init(GPIOD, &GPIO_InitStructure);
 }
 
+// EXTI (외부 인터럽트)를 구성하는 함수
 void EXTI_Configure(void) {
   GPIO_EXTILineConfig(GPIO_Prox_Front_PortSource1, GPIO_Prox_Front_PinSource1);
   EXTI_InitStructure.EXTI_Line = EXTI_Prox_Front_Line1;
@@ -166,6 +169,7 @@ void EXTI_Configure(void) {
   Right_Interrupt_Status = 0;
 }
 
+// USART (유니버셜 동기/비동기 레시버 트랜스미터)를 구성하는 함수
 void USART12_Init(void) {
   USART_InitTypeDef USART1_InitStructure;
   USART_InitTypeDef USART2_InitStructure;
@@ -197,6 +201,7 @@ void USART12_Init(void) {
   USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
 }
 
+// NVIC를 구성하는 함수
 void NVIC_Configuration(void) {
   NVIC_InitTypeDef NVIC_InitStructure;
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
@@ -247,6 +252,7 @@ void NVIC_Configuration(void) {
  // TIM_ITConfig(TIM4, TIM_IT_Update, ENABLE);
 }
 
+// PWM (펄스 폭 변조)를 구성하는 함수
 void PWM_Configuration(void) {
   uint16_t prescale = (uint16_t)(SystemCoreClock / 10000);
 
@@ -350,6 +356,7 @@ void TIM2_IRQHandler(void) {
 }
 
 // Forwarding Timer
+
 void TIM4_IRQHandler(void) {
   if (TIM_GetITStatus(TIM4, TIM_IT_Update) != RESET) {
     STOP();
@@ -361,6 +368,7 @@ void TIM4_IRQHandler(void) {
   }
 }
 
+// USART1과 관련된 인터럽트 처리
 void USART1_IRQHandler() {
   uint16_t word;
   if (USART_GetITStatus(USART1, USART_IT_RXNE) != RESET) {
@@ -374,6 +382,7 @@ void USART1_IRQHandler() {
   }
 }
 
+// USART2와 관련된 인터럽트 처리
 void USART2_IRQHandler() {
   uint16_t word;
   if (USART_GetITStatus(USART2, USART_IT_RXNE) != RESET) {

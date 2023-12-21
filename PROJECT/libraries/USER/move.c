@@ -5,8 +5,10 @@
 int global_Theta = 0;
 Point global_Current_Point, global_Next_Point;
 
+// 세 점이 이루는 CCW 값 계산하는 함수
 float thetaToRad(int theta) { return (float)theta * M_PI / 180; }
 
+// 코스에 있는 상태인지 확인하는 함수
 int chkIsInCourse() {
   int size = target_Map_size;
 
@@ -19,6 +21,7 @@ int chkIsInCourse() {
   return 0;
 }
 
+// 두 점 사이의 거리 계산하는 함수
 int getTheta(Point p0, Point p1, Point p2) {
   Point v0 = {p1.x - p0.x, p1.y - p0.y}, v1 = {p2.x - p0.x, p2.y - p0.y};
 
@@ -28,11 +31,14 @@ int getTheta(Point p0, Point p1, Point p2) {
   return (int)((acosf(dot / det) * (float)getCCW(p0, p1, p2) * 180 / M_PI) + 360) % 360;
 }
 
+// 도착 유무를 확인하는 함수
 int chkArrived(Point p0, Point p1) { return getDistance(p0, p1) < THRESHOLD; }
 
+// 다음 지점으로 이동하는 함수
 void moveForwardToNextPoint() {
   Point unit_Vector;
 
+  // 도착 유무를 확인하고, 도착하지 않았다면, 다음 지점으로 이동
   while (chkArrived(global_Current_Point, global_Next_Point) == 0 &&
          getCCW(global_Next_Point, (Point){global_Next_Point.x + 1, global_Next_Point.y}, global_Current_Point) >= 0) {
     unit_Vector.x = global_Current_Point.x + 1;
@@ -70,6 +76,7 @@ void moveForwardOnRightWall() {
   }
 } */
 
+// 코스에 들어갈 때까지 전진하는 함수
 void forwardInterrupt() {
   while(chkIsInCourse() == 0) {
     ONE_TICK_FORWARD();
@@ -79,6 +86,8 @@ void forwardInterrupt() {
   target_Map_Idx = chkIsInCourse() - 1;
 }
 
+
+// 일반적인 이동 함수
 void generalMove() {
   global_Next_Point = target_Map[0];
   moveForwardToNextPoint();

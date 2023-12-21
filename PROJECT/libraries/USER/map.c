@@ -2,19 +2,21 @@
 
 #include <math.h>
 
-Point source_Map[MAP_SIZE];
-int source_Map_size;
-int source_Map_Idx = 0;
+Point source_Map[MAP_SIZE]; // 출발지 맵
+int source_Map_size; // 출발지 맵 크기
+int source_Map_Idx = 0; // 출발지 맵 index
 
-Point target_Map[MAP_SIZE];
-int target_Map_size;
-int target_Map_Idx = 0;
+Point target_Map[MAP_SIZE]; // 목적지 맵
+int target_Map_size; // 목적지 맵 크기
+int target_Map_Idx = 0; // 목적지 맵 index
 
-const Point init_map[4] = {{0, 0}, {X_MAX, 0}, {X_MAX, Y_MAX}, {0, Y_MAX}};
+const Point init_map[4] = {{0, 0}, {X_MAX, 0}, {X_MAX, Y_MAX}, {0, Y_MAX}}; // 초기 맵 정보
 
-static Point stack[MAP_SIZE];
+static Point stack[MAP_SIZE]; // Convex Hull을 위한 stack
 static int stack_top = 0;
 
+
+// 세 점이 이루는 CCW 값 계산하는 함수
 int getCCW(Point p1, Point p2, Point p3) {
   float temp = p1.x * p2.y - p1.y * p2.x;
   temp += p2.x * p3.y - p2.y * p3.x;
@@ -28,8 +30,10 @@ int getCCW(Point p1, Point p2, Point p3) {
   return 0;
 }
 
+// 두 점 사이의 거리 계산하는 함수
 float getDistance(Point p1, Point p2) { return sqrtf(powf(p1.x - p2.x, 2) + powf(p1.y - p2.y, 2)); }
 
+// 맵 초기화 함수
 void initMap(Point *map, int *map_size, int *map_Idx) {
   int size = *map_size = 4;
 
@@ -39,6 +43,7 @@ void initMap(Point *map, int *map_size, int *map_Idx) {
   }
 }
 
+// 맵 정렬 함수
 void sortMap(Point *map, const int *map_size) {
   int size = *map_size;
 
@@ -53,6 +58,7 @@ void sortMap(Point *map, const int *map_size) {
   }
 }
 
+// 맵 x좌표 기준 정렬 함수
 void sortMapByX(Point *map, const int *map_size) {
   int size = *map_size;
 
@@ -67,6 +73,7 @@ void sortMapByX(Point *map, const int *map_size) {
   }
 }
 
+// 맵 CCW 기준 정렬 함수
 void sortMapByCCW(Point *map, const int *map_size) {
   int size = *map_size;
 
@@ -111,6 +118,7 @@ void assignConvexHull(Point *map, int *map_size) {
   stack_top = 0;
 }
 
+// calculate and store mid points
 void calcAndStoreMidPoints(Point *map_Source, Point *map_Target, const int *map_SourceSize, int *map_TargetSize) {
   int size = *map_SourceSize;
   int targetIndex = -1;
