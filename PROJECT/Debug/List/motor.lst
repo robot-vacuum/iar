@@ -1,0 +1,359 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V8.22.1.15669/W32 for ARM       14/Dec/2023  22:01:55
+# Copyright 1999-2018 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\libraries\USER\motor.c
+#    Command line =  
+#        -f C:\Users\user\AppData\Local\Temp\EW9152.tmp
+#        (C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\libraries\USER\motor.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_CL -lC
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\Debug\List -o
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\Debug\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\libraries\CMSIS\DeviceSupport\
+#        -I
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\libraries\CMSIS\DeviceSupport\Startup\
+#        -I
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\inc\
+#        -I
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\libraries\STM32F10x_StdPeriph_Driver_v3.5\src\
+#        -I
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\libraries\LCD\
+#        -I C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\user\ -I
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\user\inc\ -I
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\libraries\ -I
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\libraries\USER\
+#        -Ol -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\CMSIS\Core\Include\" -I "C:\Program Files (x86)\IAR
+#        Systems\Embedded Workbench 8.0\arm\CMSIS\DSP\Include\")
+#    Locale       =  C
+#    List file    =  
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\Debug\List\motor.lst
+#    Object file  =  
+#        C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\Debug\Obj\motor.o
+#
+###############################################################################
+
+C:\Users\user\Desktop\1214\testing-ground-main\PROJECT\libraries\USER\motor.c
+      1          #include "motor.h"
+      2          #include "definitions.h"
+      3          
+
+   \                                 In section .text, align 2, keep-with-next
+      4          void delay()
+      5          {
+      6              int i;
+      7              for(i = 0; i < 10000; i++);
+   \                     delay: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0xE000             B.N      ??delay_0
+   \                     ??delay_1: (+1)
+   \   00000004   0x1C40             ADDS     R0,R0,#+1
+   \                     ??delay_0: (+1)
+   \   00000006   0xF242 0x7110      MOVW     R1,#+10000
+   \   0000000A   0x4288             CMP      R0,R1
+   \   0000000C   0xDBFA             BLT.N    ??delay_1
+      8          }
+   \   0000000E   0x4770             BX       LR               ;; return
+      9          
+
+   \                                 In section .text, align 2, keep-with-next
+     10          void LEFT_MOTOR_FORWARD(void)
+     11          {
+   \                     LEFT_MOTOR_FORWARD: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     12              GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
+   \   00000002   0x2104             MOVS     R1,#+4
+   \   00000004   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   00000006   0x.... 0x....      BL       GPIO_ResetBits
+     13              GPIO_SetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
+   \   0000000A   0x2108             MOVS     R1,#+8
+   \   0000000C   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   0000000E   0x.... 0x....      BL       GPIO_SetBits
+     14          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+     15          
+
+   \                                 In section .text, align 2, keep-with-next
+     16          void LEFT_MOTOR_BACKWARD(void)
+     17          {
+   \                     LEFT_MOTOR_BACKWARD: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     18              GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
+   \   00000002   0x2108             MOVS     R1,#+8
+   \   00000004   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   00000006   0x.... 0x....      BL       GPIO_ResetBits
+     19              GPIO_SetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
+   \   0000000A   0x2104             MOVS     R1,#+4
+   \   0000000C   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   0000000E   0x.... 0x....      BL       GPIO_SetBits
+     20          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+     21          
+
+   \                                 In section .text, align 2, keep-with-next
+     22          void LEFT_MOTOR_STOP(void)
+     23          {
+   \                     LEFT_MOTOR_STOP: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     24              GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In1_Pin);
+   \   00000002   0x2104             MOVS     R1,#+4
+   \   00000004   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   00000006   0x.... 0x....      BL       GPIO_ResetBits
+     25              GPIO_ResetBits(GPIO_Left_Motor_Port, GPIO_Motor_In2_Pin);
+   \   0000000A   0x2108             MOVS     R1,#+8
+   \   0000000C   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   0000000E   0x.... 0x....      BL       GPIO_ResetBits
+     26          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+     27          
+
+   \                                 In section .text, align 2, keep-with-next
+     28          void RIGHT_MOTOR_FORWARD(void)
+     29          {
+   \                     RIGHT_MOTOR_FORWARD: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     30              GPIO_SetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
+   \   00000002   0x2110             MOVS     R1,#+16
+   \   00000004   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   00000006   0x.... 0x....      BL       GPIO_SetBits
+     31              GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);  
+   \   0000000A   0x2120             MOVS     R1,#+32
+   \   0000000C   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   0000000E   0x.... 0x....      BL       GPIO_ResetBits
+     32          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+     33          
+
+   \                                 In section .text, align 2, keep-with-next
+     34          void RIGHT_MOTOR_BACKWARD(void)
+     35          {
+   \                     RIGHT_MOTOR_BACKWARD: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     36              GPIO_SetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);
+   \   00000002   0x2120             MOVS     R1,#+32
+   \   00000004   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   00000006   0x.... 0x....      BL       GPIO_SetBits
+     37              GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
+   \   0000000A   0x2110             MOVS     R1,#+16
+   \   0000000C   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   0000000E   0x.... 0x....      BL       GPIO_ResetBits
+     38          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+     39          
+
+   \                                 In section .text, align 2, keep-with-next
+     40          void RIGHT_MOTOR_STOP(void)
+     41          {
+   \                     RIGHT_MOTOR_STOP: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     42              GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In3_Pin);
+   \   00000002   0x2110             MOVS     R1,#+16
+   \   00000004   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   00000006   0x.... 0x....      BL       GPIO_ResetBits
+     43              GPIO_ResetBits(GPIO_Right_Motor_Port, GPIO_Motor_In4_Pin);
+   \   0000000A   0x2120             MOVS     R1,#+32
+   \   0000000C   0x....             LDR.N    R0,??DataTable6  ;; 0x40011800
+   \   0000000E   0x.... 0x....      BL       GPIO_ResetBits
+     44          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+     45          
+
+   \                                 In section .text, align 2, keep-with-next
+     46          void FORWARD(void)
+     47          {
+   \                     FORWARD: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     48              LEFT_MOTOR_FORWARD();
+   \   00000002   0x.... 0x....      BL       LEFT_MOTOR_FORWARD
+     49              RIGHT_MOTOR_FORWARD();
+   \   00000006   0x.... 0x....      BL       RIGHT_MOTOR_FORWARD
+     50          }
+   \   0000000A   0xBD01             POP      {R0,PC}          ;; return
+     51          
+
+   \                                 In section .text, align 2, keep-with-next
+     52          void BACKWARD(void)
+     53          {
+   \                     BACKWARD: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     54              LEFT_MOTOR_BACKWARD();
+   \   00000002   0x.... 0x....      BL       LEFT_MOTOR_BACKWARD
+     55              RIGHT_MOTOR_BACKWARD();
+   \   00000006   0x.... 0x....      BL       RIGHT_MOTOR_BACKWARD
+     56          }
+   \   0000000A   0xBD01             POP      {R0,PC}          ;; return
+     57          
+
+   \                                 In section .text, align 2, keep-with-next
+     58          void STOP(void)
+     59          {
+   \                     STOP: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     60            LEFT_MOTOR_STOP();
+   \   00000002   0x.... 0x....      BL       LEFT_MOTOR_STOP
+     61            RIGHT_MOTOR_STOP();
+   \   00000006   0x.... 0x....      BL       RIGHT_MOTOR_STOP
+     62          }
+   \   0000000A   0xBD01             POP      {R0,PC}          ;; return
+     63          
+
+   \                                 In section .text, align 2, keep-with-next
+     64          void CLOCKWISE_ROTATION(void)
+     65          {
+   \                     CLOCKWISE_ROTATION: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     66              LEFT_MOTOR_BACKWARD();
+   \   00000002   0x.... 0x....      BL       LEFT_MOTOR_BACKWARD
+     67              RIGHT_MOTOR_FORWARD();
+   \   00000006   0x.... 0x....      BL       RIGHT_MOTOR_FORWARD
+     68          }
+   \   0000000A   0xBD01             POP      {R0,PC}          ;; return
+     69          
+
+   \                                 In section .text, align 2, keep-with-next
+     70          void COUNTER_CLOCKWISE_ROTATION(void)
+     71          {
+   \                     COUNTER_CLOCKWISE_ROTATION: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     72              LEFT_MOTOR_FORWARD();
+   \   00000002   0x.... 0x....      BL       LEFT_MOTOR_FORWARD
+     73              RIGHT_MOTOR_BACKWARD();
+   \   00000006   0x.... 0x....      BL       RIGHT_MOTOR_BACKWARD
+     74          }
+   \   0000000A   0xBD01             POP      {R0,PC}          ;; return
+     75          
+
+   \                                 In section .text, align 2, keep-with-next
+     76          void ONE_TICK_FORWARD(void)
+     77          {
+   \                     ONE_TICK_FORWARD: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     78            TIM_Cmd(TIM2, ENABLE);
+   \   00000002   0x2101             MOVS     R1,#+1
+   \   00000004   0xF05F 0x4080      MOVS     R0,#+1073741824
+   \   00000008   0x.... 0x....      BL       TIM_Cmd
+     79            FORWARD();
+   \   0000000C   0x.... 0x....      BL       FORWARD
+     80          }
+   \   00000010   0xBD01             POP      {R0,PC}          ;; return
+     81          
+
+   \                                 In section .text, align 2, keep-with-next
+     82          void ONE_TICK_CLOCKWISE_ROTATION(void)
+     83          {
+   \                     ONE_TICK_CLOCKWISE_ROTATION: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     84            TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+   \   00000002   0x2201             MOVS     R2,#+1
+   \   00000004   0x2101             MOVS     R1,#+1
+   \   00000006   0xF05F 0x4080      MOVS     R0,#+1073741824
+   \   0000000A   0x.... 0x....      BL       TIM_ITConfig
+     85            CLOCKWISE_ROTATION();
+   \   0000000E   0x.... 0x....      BL       CLOCKWISE_ROTATION
+     86          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+     87          
+
+   \                                 In section .text, align 2, keep-with-next
+     88          void ONE_TICK_COUNTER_CLOCKWISE_ROTATION(void)
+     89          {
+   \                     ONE_TICK_COUNTER_CLOCKWISE_ROTATION: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     90            TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+   \   00000002   0x2201             MOVS     R2,#+1
+   \   00000004   0x2101             MOVS     R1,#+1
+   \   00000006   0xF05F 0x4080      MOVS     R0,#+1073741824
+   \   0000000A   0x.... 0x....      BL       TIM_ITConfig
+     91            COUNTER_CLOCKWISE_ROTATION();
+   \   0000000E   0x.... 0x....      BL       COUNTER_CLOCKWISE_ROTATION
+     92          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable6:
+   \   00000000   0x40011800         DC32     0x40011800
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   BACKWARD
+         8   -> LEFT_MOTOR_BACKWARD
+         8   -> RIGHT_MOTOR_BACKWARD
+       8   CLOCKWISE_ROTATION
+         8   -> LEFT_MOTOR_BACKWARD
+         8   -> RIGHT_MOTOR_FORWARD
+       8   COUNTER_CLOCKWISE_ROTATION
+         8   -> LEFT_MOTOR_FORWARD
+         8   -> RIGHT_MOTOR_BACKWARD
+       8   FORWARD
+         8   -> LEFT_MOTOR_FORWARD
+         8   -> RIGHT_MOTOR_FORWARD
+       8   LEFT_MOTOR_BACKWARD
+         8   -> GPIO_ResetBits
+         8   -> GPIO_SetBits
+       8   LEFT_MOTOR_FORWARD
+         8   -> GPIO_ResetBits
+         8   -> GPIO_SetBits
+       8   LEFT_MOTOR_STOP
+         8   -> GPIO_ResetBits
+       8   ONE_TICK_CLOCKWISE_ROTATION
+         8   -> CLOCKWISE_ROTATION
+         8   -> TIM_ITConfig
+       8   ONE_TICK_COUNTER_CLOCKWISE_ROTATION
+         8   -> COUNTER_CLOCKWISE_ROTATION
+         8   -> TIM_ITConfig
+       8   ONE_TICK_FORWARD
+         8   -> FORWARD
+         8   -> TIM_Cmd
+       8   RIGHT_MOTOR_BACKWARD
+         8   -> GPIO_ResetBits
+         8   -> GPIO_SetBits
+       8   RIGHT_MOTOR_FORWARD
+         8   -> GPIO_ResetBits
+         8   -> GPIO_SetBits
+       8   RIGHT_MOTOR_STOP
+         8   -> GPIO_ResetBits
+       8   STOP
+         8   -> LEFT_MOTOR_STOP
+         8   -> RIGHT_MOTOR_STOP
+       0   delay
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable6
+      12  BACKWARD
+      12  CLOCKWISE_ROTATION
+      12  COUNTER_CLOCKWISE_ROTATION
+      12  FORWARD
+      20  LEFT_MOTOR_BACKWARD
+      20  LEFT_MOTOR_FORWARD
+      20  LEFT_MOTOR_STOP
+      20  ONE_TICK_CLOCKWISE_ROTATION
+      20  ONE_TICK_COUNTER_CLOCKWISE_ROTATION
+      18  ONE_TICK_FORWARD
+      20  RIGHT_MOTOR_BACKWARD
+      20  RIGHT_MOTOR_FORWARD
+      20  RIGHT_MOTOR_STOP
+      12  STOP
+      16  delay
+
+ 
+ 258 bytes in section .text
+ 
+ 258 bytes of CODE memory
+
+Errors: none
+Warnings: none
