@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/iar
-# Edit at https://www.toptal.com/developers/gitignore?templates=iar
+# Created by https://www.toptal.com/developers/gitignore/api/iar,iarembeddedworkbench
+# Edit at https://www.toptal.com/developers/gitignore?templates=iar,iarembeddedworkbench
 
 ### IAR ###
 # Compiled binaries
@@ -50,4 +50,36 @@ Backup*
 # IAR .dep files
 *.dep
 
-# End of https://www.toptal.com/developers/gitignore/api/iar
+### IAREmbeddedWorkBench ###
+# IAR C-STAT and C-RUN
+# Comment this out if you use C-Stat or C-Run to compile/analyze your project
+*.ewt
+
+# IAR Debugger files
+*.ewd
+
+# IAR Workspace files
+*.eww
+
+# IAR Settings
+
+# IAR Debug Exe
+**/Debug/Exe/
+
+# IAR Debug List
+**/Debug/List
+
+# IAR Debug Obj
+
+# Log files
+**.log
+
+# IAR backup files
+
+# IAR .dep files
+
+# Compiled Binaries
+
+# Trash files
+
+# End of https://www.toptal.com/developers/gitignore/api/iar,iarembeddedworkbench
